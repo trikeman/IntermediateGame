@@ -12,4 +12,8 @@ public class Script : MonoBehaviour {
 	void Update () {
 	
 	}
+	
+	void TJSmellsFunny(){
+		print("A LOT");
+	}
 }
