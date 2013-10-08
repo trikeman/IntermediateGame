@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\MonsterFollow.cs" />
      <Compile Include="Assets\RockMonsterAttack.cs" />
+     <Compile Include="Assets\RockReaction.cs" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

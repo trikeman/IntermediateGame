@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\MonsterFollow.cs" />
      <Compile Include="Assets\RockMonsterAttack.cs" />
+     <Compile Include="Assets\RockReaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
