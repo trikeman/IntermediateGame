@@ -17,7 +17,7 @@ public class MonsterFollow : MonoBehaviour {
 			following=true;
 		}
 		if(following&&(distance ()>2)){
-			transform.position=Vector3.Lerp(transform.position,player.transform.position,.5f);
+			transform.position=Vector3.Lerp(transform.position,player.transform.position,.01f);
 		}
 	}
 	
