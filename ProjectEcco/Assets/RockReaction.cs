@@ -19,7 +19,9 @@ public class RockReaction : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision){
 		if(collision.gameObject==monster){
-			rigidbody.velocity=monster.rigidbody.velocity*100;
+			Vector3 temp = monster.rigidbody.velocity;
+			temp.y = 0;
+			rigidbody.velocity=temp*100;
 		}
 	}
 }
