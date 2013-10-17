@@ -44,11 +44,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BouncyPlatform.cs" />
      <Compile Include="Assets\MonsterFollow.cs" />
      <Compile Include="Assets\RockMonsterAttack.cs" />
      <Compile Include="Assets\RockReaction.cs" />
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
