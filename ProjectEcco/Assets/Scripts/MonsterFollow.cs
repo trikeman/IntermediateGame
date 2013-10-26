@@ -19,11 +19,35 @@ public class MonsterFollow : MonoBehaviour {
 		if(following&&(distance ()>2)){
 			transform.position=Vector3.Lerp(transform.position,player.transform.position,.01f);
 		}
+		if(following&&jump()){
+			rigidbody.AddForce (250*Vector3.up);
+		}
 	}
 	
 	float distance(){
 		float xDiff = player.transform.position.x-transform.position.x;
 		float zDiff = player.transform.position.z-transform.position.z;
 		return (Mathf.Sqrt((xDiff*xDiff)+(zDiff*zDiff)));
+	}
+	
+	bool jump(){
+		bool shouldJump=false;
+		
+		float yDiff = player.transform.position.y-transform.position.y;
+		
+		if(player.transform.position.y>transform.position.y){
+			if(yDiff>.75f){
+				if(distance ()<=2f){
+					if(grounded()){
+						shouldJump = true;
+					}
+				}
+			}
+		}
+		return shouldJump;
+	}
+	
+	bool grounded(){
+		return Physics.Raycast (transform.position,-Vector3.up,collider.bounds.extents.y+.1f);
 	}
 }
