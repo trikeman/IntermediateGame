@@ -44,8 +44,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
      <Compile Include="Assets\CameraBehavior.cs" />
      <Compile Include="Assets\Reset.cs" />
+=======
+     <Compile Include="Assets\Scripts\CameraBehavior.cs" />
+     <Compile Include="Assets\Scripts\LightMonsterAttack.cs" />
+>>>>>>> bc3383aba2fb0584c1ce7b67a920d61131fae6b5
      <Compile Include="Assets\Scripts\MonsterFollow.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\RockMonsterAttack.cs" />
