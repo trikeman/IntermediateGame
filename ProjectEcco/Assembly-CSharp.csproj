@@ -47,6 +47,7 @@
      <Compile Include="Assets\CameraBehavior.cs" />
      <Compile Include="Assets\Reset.cs" />
      <Compile Include="Assets\Scripts\MonsterFollow.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\RockMonsterAttack.cs" />
      <Compile Include="Assets\Scripts\RockReaction.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
