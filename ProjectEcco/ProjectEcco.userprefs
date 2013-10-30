@@ -1,19 +1,10 @@
 ﻿<Properties>
-<<<<<<< HEAD
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-=======
-  <MonoDevelop.Ide.Workspace />
->>>>>>> 74ac326c8a2bb3baa5b5950c2be4875af8910d54
-  <MonoDevelop.Ide.Workbench />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LightBall.cs">
     <Files>
-      <File FileName="Assets\Scripts\CameraBehavior.cs" Line="36" Column="28" />
+      <File FileName="Assets/Scripts/LightBall.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
->>>>>>> bc3383aba2fb0584c1ce7b67a920d61131fae6b5
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
