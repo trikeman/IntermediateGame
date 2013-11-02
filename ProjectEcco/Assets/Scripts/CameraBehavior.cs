@@ -1,68 +1,35 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 public class CameraBehavior : MonoBehaviour {
 
 	public GameObject player;
-	public float xOffset = 1.5f;
-	public float yOffset = 1.5f;
-	public float zOffset = 1.5f;
+	public float distance = 1.5f;
 	public float speed = 1f;
-	
-	private Vector3 offset;
-	private Quaternion idealRot;
 	
 	// Use this for initialization
 	void Start () {
-		offset = new Vector3(xOffset, yOffset, zOffset);
 		transform.LookAt (player.transform.position);
 	}
 	
 	// Update is called once per frame
-	void Update () {		
-		//rotation
-		if(!faceBack()){
-			idealRot.SetFromToRotation(transform.forward,player.transform.forward);
-		}
-		
-		if(transform.rotation!=idealRot){
-			transform.rotation = Quaternion.Lerp (transform.rotation,idealRot,Time.time*speed);
-		}
-		
-		//position
-		transform.position = player.transform.position+offset;
-		
-		//Look at player
-		transform.LookAt(player.transform.position);
+	void Update () {
 		/*RaycastHit hit;
 
         if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
 		{
 			gameObject.transform.LookAt(hit.point);
-        }
+        }* /
 		
 		Vector3 pos = player.transform.position;
 		pos.y += 2f;
 		pos += player.transform.forward*(-1*distance);
 		transform.position=pos;
 		
-		transform.LookAt(player.transform.position);*/
+		transform.LookAt(player.transform.position);
 	}
-	
-	public bool faceBack(){
-		Vector3 thisPos = transform.forward;
-		Vector3 targetPos = player.transform.forward;
-		
-		thisPos.y = 0f;
-		targetPos.y = 0f;
-		
-		thisPos.Normalize ();
-		targetPos.Normalize ();
-		
-		return (thisPos==targetPos);
-	}
-}
-/*using UnityEngine;
+}*/
+using UnityEngine;
 using System.Collections;
  
 [AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
@@ -128,4 +95,4 @@ public class CameraBehavior : MonoBehaviour {
     }
  
  
-}*/
+}

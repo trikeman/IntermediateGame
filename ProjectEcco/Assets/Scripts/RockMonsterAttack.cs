@@ -19,9 +19,6 @@ public class RockMonsterAttack : MonoBehaviour {
 			move();
 			//follow.following=true;
 		}
-		if(Input.GetButtonDown ("Return")){
-			monsterFollow.following=true;
-		}
 	}
 	
 	void move(){
