@@ -2,14 +2,40 @@
 using System.Collections;
 
 public class CameraOrbit : MonoBehaviour {
-
+	
+	public GameObject player;
+	public float speed = 1f;
+	
+	private Quaternion idealRot;
+	
 	// Use this for initialization
 	void Start () {
-	
+		transform.position=player.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		transform.position=player.transform.position;
+		
+		if(!faceBack()){
+			idealRot.SetFromToRotation(transform.forward,player.transform.forward);
+		}
+		
+		if(transform.rotation!=idealRot){
+			transform.rotation=Quaternion.Lerp(transform.rotation,idealRot,Time.time * speed);
+		}
+	}
 	
+	public bool faceBack(){
+		Vector3 thisPos= transform.forward;
+		Vector3 targetPos = player.transform.forward;
+		
+		thisPos.y = 0f;
+		targetPos.y = 0f;
+		
+		thisPos.Normalize();
+		targetPos.Normalize();
+		
+		return(thisPos==targetPos);
 	}
 }

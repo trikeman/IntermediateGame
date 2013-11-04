@@ -7,10 +7,10 @@ public class CameraBehavior : MonoBehaviour {
 	public float xOffset = 1.5f;
 	public float yOffset = 1.5f;
 	public float zOffset = 1.5f;
-	public float speed = 1f;
+	//public float speed = 1f;
 	
 	private Vector3 offset;
-	private Quaternion idealRot;
+	//private Quaternion idealRot;
 	
 	// Use this for initialization
 	void Start () {
@@ -20,14 +20,14 @@ public class CameraBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//rotation
+		/*//rotation
 		if(!faceBack()){
 			idealRot.SetFromToRotation(transform.forward,player.transform.forward);
 		}
 		
 		if(transform.rotation!=idealRot){
 			transform.rotation=Quaternion.Lerp (transform.rotation,idealRot,Time.time*speed);
-		}
+		}*/
 		
 		//position
 		transform.position=player.transform.position+offset;
@@ -49,7 +49,7 @@ public class CameraBehavior : MonoBehaviour {
 		transform.LookAt(player.transform.position);*/
 	}
 	
-	public bool faceBack(){
+	/*public bool faceBack(){
 		Vector3 thisPos= transform.forward;
 		Vector3 targetPos = player.transform.forward;
 		
@@ -60,7 +60,7 @@ public class CameraBehavior : MonoBehaviour {
 		targetPos.Normalize();
 		
 		return(thisPos==targetPos);
-	}
+	}*/
 }
 /*using UnityEngine;
 using System.Collections;
