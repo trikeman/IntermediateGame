@@ -14,11 +14,18 @@ public class MonsterFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		/*GameObject temp;
+		if((Vector3.Distance (transform.position, (temp=GameObject.FindWithTag("Unmovable")).transform.position))>.1f && transform.position.y<=temp.transform.position.y){
+			Vector3 direction = (transform.position - temp.transform.position);
+			direction.Normalize();
+			transform.Translate (-1*direction);
+		}*/
+		
 		if(!following&&(distance()<=1)){
 			following=true;
 		}
 		if(following&&jump()){
-			rigidbody.AddForce (jumpForce*Vector3.up);
+			transform.position=new Vector3(transform.position.x,player.transform.position.y+3,transform.position.z);//rigidbody.AddForce (jumpForce*Vector3.up);
 		}
 		if(following&&(distance ()>2)){
 			transform.position=Vector3.Lerp(transform.position,player.transform.position,.01f);
