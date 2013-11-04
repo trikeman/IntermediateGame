@@ -47,6 +47,7 @@
      <Compile Include="Assets\Cutscenes\CameraTilt.cs" />
      <Compile Include="Assets\Cutscenes\FadeObjectsInOut.cs" />
      <Compile Include="Assets\Cutscenes\Highlight.cs" />
+     <Compile Include="Assets\Cutscenes\HowToPlay.cs" />
      <Compile Include="Assets\Cutscenes\PlayGame.cs" />
      <Compile Include="Assets\Scripts\CameraBehavior.cs" />
      <Compile Include="Assets\Scripts\CameraOrbit.cs" />

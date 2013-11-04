@@ -1,26 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayGame : MonoBehaviour {
-	
+public class HowToPlay : MonoBehaviour {
 
 private Color startcolor;
 	
-	void Start(){
+		void Start(){
 		    startcolor = renderer.material.color;
 	}
 	
-void OnMouseOver()
+	
+void OnMouseEnter()
 {
-
+  
    renderer.material.color = Color.yellow;
-		
-		  if (Input.GetMouseButtonDown(0)){
+				  if (Input.GetMouseButtonDown(0)){
 			//bookScene.animation.Play("Book Opening");
-			Debug.Log("let's load things");
-			Application.LoadLevel("UnderTheBed");
+	
 		}
-             
 }
 void OnMouseExit()
 {
