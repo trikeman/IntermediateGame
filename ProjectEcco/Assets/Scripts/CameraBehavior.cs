@@ -7,30 +7,36 @@ public class CameraBehavior : MonoBehaviour {
 	public float xOffset = 1.5f;
 	public float yOffset = 1.5f;
 	public float zOffset = 1.5f;
-	//public float speed = 1f;
+	public float speed = 1f;
 	
 	private Vector3 offset;
-	//private Quaternion idealRot;
+	public GameObject parent;
+	private Quaternion idealRot;
 	
 	// Use this for initialization
 	void Start () {
 		offset = new Vector3(xOffset,yOffset,zOffset);
+		//parent = transform.parent.gameObject;
+		transform.position=player.transform.position+offset;
 		transform.LookAt (player.transform.position);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		/*//rotation
-		if(!faceBack()){
-			idealRot.SetFromToRotation(transform.forward,player.transform.forward);
+		//rotation
+		transform.RotateAround(player.transform.position,player.transform.up,Mathf.Acos (Vector3.Dot (transform.forward,player.transform.forward)));
+		/*if(!faceBack()){
+			idealRot.SetLookRotation(player.transform.forward);
 		}
 		
 		if(transform.rotation!=idealRot){
-			transform.rotation=Quaternion.Lerp (transform.rotation,idealRot,Time.time*speed);
-		}*/
-		
+			transform.rotation=Quaternion.Lerp (transform.rotation,idealRot,Time.time*.01f*speed);
+		}
+		offset.x =xOffset;
+		offset.y=yOffset;
+		offset.z=zOffset;*/
 		//position
-		transform.position=player.transform.position+offset;
+		transform.position=Vector3.Lerp (transform.position,player.transform.position+offset,Time.time*speed);
 		
 		//Look at player
 		transform.LookAt(player.transform.position);
@@ -49,7 +55,7 @@ public class CameraBehavior : MonoBehaviour {
 		transform.LookAt(player.transform.position);*/
 	}
 	
-	/*public bool faceBack(){
+	public bool faceBack(){
 		Vector3 thisPos= transform.forward;
 		Vector3 targetPos = player.transform.forward;
 		
@@ -60,7 +66,7 @@ public class CameraBehavior : MonoBehaviour {
 		targetPos.Normalize();
 		
 		return(thisPos==targetPos);
-	}*/
+	}
 }
 /*using UnityEngine;
 using System.Collections;

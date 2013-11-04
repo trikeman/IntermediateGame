@@ -5,7 +5,7 @@ public class MonsterFollow : MonoBehaviour {
 	
 	public bool following = false;
 	public GameObject player;
-	public float jumpForce = 2000;
+	public float jumpForce = 3000;
 
 	// Use this for initialization
 	void Start () {

@@ -15,14 +15,15 @@ public class CameraOrbit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position=player.transform.position;
+		transform.position = Vector3.Lerp(transform.position,player.transform.position,Time.time*speed);
 		
 		if(!faceBack()){
-			idealRot.SetFromToRotation(transform.forward,player.transform.forward);
+			//idealRot.SetFromToRotation(transform.forward,player.transform.forward);
+			idealRot.SetLookRotation(player.transform.forward);
 		}
 		
 		if(transform.rotation!=idealRot){
-			transform.rotation=Quaternion.Lerp(transform.rotation,idealRot,Time.time * speed);
+			transform.rotation=Quaternion.Lerp(transform.rotation,idealRot,Time.time *.1f* speed);
 		}
 	}
 	
