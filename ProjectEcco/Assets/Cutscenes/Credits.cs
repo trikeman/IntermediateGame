@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HowToPlay: MonoBehaviour {
+public class Credits: MonoBehaviour {
 
 private Color startcolor;
-	public Transform htpCamera;
+	public Transform creditsCamera;
 	
 		void Start(){
 		    startcolor = renderer.material.color;
@@ -16,8 +16,8 @@ void OnMouseOver()
   
    renderer.material.color = Color.yellow;
 				  if (Input.GetMouseButtonDown(0)){
-			Camera.main.transform.position = htpCamera.position;
-			Camera.main.transform.rotation = htpCamera.rotation;
+			Camera.main.transform.position = creditsCamera.position;
+			Camera.main.transform.rotation = creditsCamera.rotation;
 			//bookScene.animation.Play("Book Opening");
 			Debug.Log("Why now?");
 	
