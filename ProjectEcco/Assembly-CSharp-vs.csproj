@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\CameraBehavior.cs" />
      <Compile Include="Assets\Scripts\LightBall.cs" />
      <Compile Include="Assets\Scripts\LightMonsterAttack.cs" />
+     <Compile Include="Assets\Scripts\LightWallAppears.cs" />
      <Compile Include="Assets\Scripts\MonsterFollow.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\RockMonsterAttack.cs" />
