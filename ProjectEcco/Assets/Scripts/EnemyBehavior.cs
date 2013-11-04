@@ -8,6 +8,7 @@ public class EnemyBehavior : MonoBehaviour {
 	public int TimerSet = 120;
 	public float force = 1f;
 	public float speed = .001f;
+	public Collider triggerVol;
 	
 	private int timer=0;
 	
@@ -18,12 +19,14 @@ public class EnemyBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//if(timer==0)
-			transform.position=Vector3.Lerp (transform.position,player.transform.position, Time.time*speed);
-		//else if(timer<0)
-			//timer=0;
-		//else
-			//timer--;
+		if(triggerVol.collider.bounds.Contains(player.transform.position)){
+			if(timer==0)
+				transform.position=Vector3.Lerp (transform.position,player.transform.position, Time.time*speed);
+			else if(timer<0)
+				timer=0;
+			else
+				timer--;
+		}
 	}
 	
 	void OnCollisionEnter(Collision collision){
