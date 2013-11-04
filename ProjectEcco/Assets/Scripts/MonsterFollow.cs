@@ -27,9 +27,13 @@ public class MonsterFollow : MonoBehaviour {
 		if(following&&jump()){
 			transform.position=new Vector3(transform.position.x,player.transform.position.y+3,transform.position.z);//rigidbody.AddForce (jumpForce*Vector3.up);
 		}
-		if(following&&(distance ()>2)){
+		if(following&&distance ()>10){
+			transform.position=player.transform.position-5*player.transform.forward;
+		}
+		else if(following&&(distance ()>2)){
 			transform.position=Vector3.Lerp(transform.position,player.transform.position,.01f);
 		}
+		
 	}
 	
 	float distance(){
