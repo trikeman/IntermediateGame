@@ -26,9 +26,9 @@ enum CharacterState {
 private var _characterState : CharacterState;
 
 // The speed when walking
-var walkSpeed = 2.0;
+var walkSpeed = 6.0;
 // after trotAfterSeconds of walking we trot with trotSpeed
-var trotSpeed = 4.0;
+var trotSpeed = 6.0;
 // when pressing "Fire3" button (cmd) we start running
 var runSpeed = 6.0;
 

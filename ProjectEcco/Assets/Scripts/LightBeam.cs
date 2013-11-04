@@ -14,6 +14,11 @@ public class LightBeam : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter(Collision collision){
-		Destroy(this.gameObject);
+		if(collision.gameObject.tag=="Enemy"){
+		
+		}
+		else{
+			Destroy(this.gameObject);
+		}
 	}
 }
