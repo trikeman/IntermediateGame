@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\CameraMain.cs" />
      <Compile Include="Assets\Scripts\CameraOrbit.cs" />
      <Compile Include="Assets\Scripts\LightBall.cs" />
+     <Compile Include="Assets\Scripts\LightBeam.cs" />
      <Compile Include="Assets\Scripts\LightMonsterAttack.cs" />
      <Compile Include="Assets\Scripts\LightWallAppears.cs" />
      <Compile Include="Assets\Scripts\MonsterFollow.cs" />
