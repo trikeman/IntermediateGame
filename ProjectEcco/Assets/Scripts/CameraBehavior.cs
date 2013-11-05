@@ -93,14 +93,7 @@ public class CameraBehavior : MonoBehaviour {
 		thisPos.Normalize();
 		targetPos.Normalize();
 		
-		if(Vector3.Dot (thisPos,targetPos)>=0f){
-			angle=Mathf.Acos (Vector3.Dot (thisPos,targetPos));
-		}
-		else {
-			angle=-1f*Mathf.Acos (Vector3.Dot (thisPos,targetPos));
-		}
-		
-		return(angle>0);
+		return(Vector3.Cross(thisPos,targetPos).y>=0);
 	}
 }
 /*using UnityEngine;
