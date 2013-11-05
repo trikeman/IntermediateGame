@@ -1,10 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cutscenes/EndGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Metrics.cs">
     <Files>
-      <File FileName="Assets/Scripts/LightWallAppears.cs" Line="18" Column="1" />
-      <File FileName="Assets/Cutscenes/FadeObjectsInOut.cs" Line="1" Column="1" />
-      <File FileName="Assets/Cutscenes/EndGame.cs" Line="18" Column="42" />
+      <File FileName="Assets/Scripts/Metrics.cs" Line="7" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
