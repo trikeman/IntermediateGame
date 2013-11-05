@@ -8,7 +8,7 @@ public class EnemyBehavior : MonoBehaviour {
 	
 	void Update(){
 		if(distance()<10f)
-			transform.position=Vector3.Lerp(transform.position,player.transform.position,.01f);
+			transform.position=Vector3.Lerp(transform.position,player.transform.position,.1f);
 	}
 	
 	float distance(){
@@ -16,6 +16,12 @@ public class EnemyBehavior : MonoBehaviour {
 		float yDiff = player.transform.position.y-transform.position.y;
 		float zDiff = player.transform.position.z-transform.position.z;
 		return (Mathf.Sqrt((xDiff*xDiff)+(yDiff*yDiff)+(zDiff*zDiff)));
+	}
+	
+	void OnCollisionEnter(Collision collision){
+		if(collision.gameObject==player){
+			player.rigidbody.AddForce(rigidbody.velocity);
+		}
 	}
 	/*public GameObject lightBeam;
 	public int TimerSet = 120;

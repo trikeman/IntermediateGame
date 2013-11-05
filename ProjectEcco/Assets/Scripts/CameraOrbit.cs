@@ -15,7 +15,7 @@ public class CameraOrbit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector3.Lerp(transform.position,player.transform.position,Time.time*speed);
+		transform.position = Vector3.Lerp(transform.position,player.transform.position,Time.deltaTime*speed);
 		
 		if(!faceBack()){
 			//idealRot.SetFromToRotation(transform.forward,player.transform.forward);
@@ -23,7 +23,7 @@ public class CameraOrbit : MonoBehaviour {
 		}
 		
 		if(transform.rotation!=idealRot){
-			transform.rotation=Quaternion.Lerp(transform.rotation,idealRot,Time.time *.1f* speed);
+			transform.rotation=Quaternion.Lerp(transform.rotation,idealRot,Time.deltaTime *.1f* speed);
 		}
 	}
 	

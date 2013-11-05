@@ -12,11 +12,13 @@ public class CameraBehavior : MonoBehaviour {
 	private Vector3 offset;
 	public GameObject parent;
 	private Quaternion idealRot;
+	private Vector3 lastPlayerPos;
 	
 	// Use this for initialization
 	void Start () {
 		offset = new Vector3(xOffset,yOffset,zOffset);
 		//parent = transform.parent.gameObject;
+		lastPlayerPos = player.transform.position;
 		transform.position=player.transform.position+offset;
 		transform.LookAt (player.transform.position);
 	}
@@ -24,19 +26,23 @@ public class CameraBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//rotation
-		transform.RotateAround(player.transform.position,player.transform.up,Mathf.Acos (Vector3.Dot (transform.forward,player.transform.forward)));
+		if(!faceBack ())
+			transform.RotateAround(player.transform.position,player.transform.up,Mathf.Acos (Vector3.Dot (transform.forward,player.transform.forward)));
 		/*if(!faceBack()){
 			idealRot.SetLookRotation(player.transform.forward);
 		}
 		
 		if(transform.rotation!=idealRot){
-			transform.rotation=Quaternion.Lerp (transform.rotation,idealRot,Time.time*.01f*speed);
+			transform.rotation=Quaternion.Lerp (transform.rotation,idealRot,Time.deltaTime*.01f*speed);
 		}
 		offset.x =xOffset;
 		offset.y=yOffset;
 		offset.z=zOffset;*/
-		//position
-		transform.position=Vector3.Lerp (transform.position,player.transform.position+offset,Time.time*speed);
+		//translation
+		Vector3 movement = player.transform.position-lastPlayerPos;
+		lastPlayerPos=player.transform.position;
+		transform.position+=movement;
+		//transform.position=Vector3.Lerp (transform.position,player.transform.position+offset,Time.deltaTime*speed);
 		
 		//Look at player
 		transform.LookAt(player.transform.position);
