@@ -28,9 +28,11 @@ public class CameraBehavior : MonoBehaviour {
 		//rotation
 		if(!faceBack ()){
 			if(clockwise()){
+				Debug.Log("Clockwise");
 				transform.RotateAround(player.transform.position,player.transform.up,Mathf.Acos (Vector3.Dot (transform.forward,player.transform.forward)));
 			}
 			else{
+				Debug.Log("Counter");
 				transform.RotateAround(player.transform.position,-1f*player.transform.up,Mathf.Acos (Vector3.Dot (player.transform.forward,transform.forward)));
 			}
 		}
@@ -83,6 +85,7 @@ public class CameraBehavior : MonoBehaviour {
 	public bool clockwise(){
 		Vector3 thisPos= transform.forward;
 		Vector3 targetPos = player.transform.forward;
+		float angle;
 		
 		thisPos.y = 0f;
 		targetPos.y = 0f;
@@ -90,7 +93,14 @@ public class CameraBehavior : MonoBehaviour {
 		thisPos.Normalize();
 		targetPos.Normalize();
 		
-		return(Mathf.Acos (Vector3.Dot (thisPos,targetPos))>=Mathf.Acos (Vector3.Dot (targetPos,thisPos)));
+		if(Vector3.Dot (thisPos,targetPos)>=0f){
+			angle=Mathf.Acos (Vector3.Dot (thisPos,targetPos));
+		}
+		else {
+			angle=-1f*Mathf.Acos (Vector3.Dot (thisPos,targetPos));
+		}
+		
+		return(angle>0);
 	}
 }
 /*using UnityEngine;
