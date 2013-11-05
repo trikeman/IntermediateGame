@@ -298,6 +298,9 @@ public class PauseMenu : MonoBehaviour
 	    if (IsBrowser() && !IsBeginning() && GUILayout.Button ("Restart")) {
 	        Application.OpenURL(url);
 	    }
+		if(GUILayout.Button ("Quit")){
+			Application.Quit ();
+		}
 	    EndPage();
 	}
  
