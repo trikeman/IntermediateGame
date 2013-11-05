@@ -4,16 +4,20 @@ using System;
 using System.IO;
 
 public class Metrics : MonoBehaviour {
-//	
-//	void Start(){
-//		float startTime = Time.time;
-//	}
-//	
-//	void OnTriggerEnter(Collider col){
-//		if (col.gameobject.tag = "Metrics"){
-//			Des
-//		}
-//	}
+	
+	float startTime;
+	float m_timeToComplete;
+	
+	void Start(){
+		startTime = Time.time;
+	}
+	
+	void OnTriggerEnter(Collider col){
+		float curTime = Time.time-startTime;
+	if (col.gameObject.tag == "Metrics"){
+			 m_timeToComplete = curTime;
+		}
+	}
                                                                      
                                                                      
                                                                                                              
@@ -28,14 +32,14 @@ void OnApplicationQuit ()
 		
 		//This is your main string output with all the data / variables that you want to save, plus accompanying text you want
 		string output = "--Your Data-- \n " +
-			"Player Name: " + m_playerName + "\n " +
-				"Time to Complete: " + m_timeToComplete + "\n " + 
-				"Any other metric: " + m_timeInAir);
+		
+				"Time to Complete: " + m_timeToComplete + "\n "; 
+				
 		
 		//The "Metrics" folder in "Assets" needs to exist! Either create one or replace it with a name of another folder you have
 		FileStream fs = File.Create ("Assets/Metrics/" + fileName + ".txt"); 	//Need to close this after so something else (StreamWriter) can access it
 		fs.Close ();	//Close it!
-		sw = new StreamWriter ("Assets/Metrics/" + fileName + ".txt");	//Create a StreamWriter which can write onto the file
+		StreamWriter sw = new StreamWriter ("Assets/Metrics/" + fileName + ".txt");	//Create a StreamWriter which can write onto the file
 		sw.WriteLine (output);	//Write line
 		sw.Close ();	//Close access to file
 	}
