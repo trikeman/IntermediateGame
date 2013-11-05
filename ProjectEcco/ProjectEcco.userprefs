@@ -1,14 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cutscenes/EndGame.cs">
     <Files>
-      <File FileName="Assets\Scripts\EnemyBehavior.cs" Line="10" Column="18" />
-      <File FileName="Assets\RoomTrigger.cs" Line="26" Column="26" />
-      <File FileName="Assets\Scripts\MonsterFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RockMonsterAttack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LightBeam.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LightWallAppears.cs" Line="18" Column="1" />
+      <File FileName="Assets/Cutscenes/FadeObjectsInOut.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cutscenes/EndGame.cs" Line="18" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
