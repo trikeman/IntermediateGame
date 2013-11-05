@@ -26,8 +26,14 @@ public class CameraBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//rotation
-		if(!faceBack ())
-			transform.RotateAround(player.transform.position,player.transform.up,Mathf.Acos (Vector3.Dot (transform.forward,player.transform.forward)));
+		if(!faceBack ()){
+			if(clockwise()){
+				transform.RotateAround(player.transform.position,player.transform.up,Mathf.Acos (Vector3.Dot (transform.forward,player.transform.forward)));
+			}
+			else{
+				transform.RotateAround(player.transform.position,-1f*player.transform.up,Mathf.Acos (Vector3.Dot (player.transform.forward,transform.forward)));
+			}
+		}
 		/*if(!faceBack()){
 			idealRot.SetLookRotation(player.transform.forward);
 		}
@@ -71,7 +77,20 @@ public class CameraBehavior : MonoBehaviour {
 		thisPos.Normalize();
 		targetPos.Normalize();
 		
-		return(thisPos==targetPos);
+		return(Mathf.Acos (Vector3.Dot (thisPos,targetPos))<(Mathf.PI/6)||Mathf.Acos (Vector3.Dot (targetPos,thisPos))<(Mathf.PI/6));
+	}
+	
+	public bool clockwise(){
+		Vector3 thisPos= transform.forward;
+		Vector3 targetPos = player.transform.forward;
+		
+		thisPos.y = 0f;
+		targetPos.y = 0f;
+		
+		thisPos.Normalize();
+		targetPos.Normalize();
+		
+		return(Mathf.Acos (Vector3.Dot (thisPos,targetPos))>=Mathf.Acos (Vector3.Dot (targetPos,thisPos)));
 	}
 }
 /*using UnityEngine;
