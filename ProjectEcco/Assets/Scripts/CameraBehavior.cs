@@ -47,10 +47,10 @@ public class CameraBehavior : MonoBehaviour {
 		offset.y=yOffset;
 		offset.z=zOffset;*/
 		//translation
-		Vector3 movement = player.transform.position-lastPlayerPos;
+		/*Vector3 movement = player.transform.position-lastPlayerPos;
 		lastPlayerPos=player.transform.position;
-		transform.position+=movement;
-		//transform.position=Vector3.Lerp (transform.position,player.transform.position+offset,Time.deltaTime*speed);
+		transform.position+=movement;*/
+		transform.position=Vector3.Lerp (transform.position,player.transform.position+offset,Time.deltaTime*speed);
 		
 		//Look at player
 		transform.LookAt(player.transform.position);
