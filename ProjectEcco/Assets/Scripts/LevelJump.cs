@@ -27,8 +27,5 @@ public class LevelJump : MonoBehaviour {
 		else if(Input.GetKey(KeyCode.Alpha4)){
 			transform.position=Level4Pos;
 		}
-		else if(Input.GetKey(KeyCode.Alpha5)){
-			Application.LoadLevel("EndingScene");
-		}
 	}
 }

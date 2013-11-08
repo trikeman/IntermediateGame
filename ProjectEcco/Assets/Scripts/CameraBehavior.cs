@@ -8,7 +8,6 @@ public class CameraBehavior : MonoBehaviour {
 	public float yOffset = 1.5f;
 	public float zOffset = 1.5f;
 	public float speed = 1f;
-	//public float xLimit = 13.5f;
 	
 	private Vector3 offset;
 	public GameObject parent;
@@ -21,7 +20,7 @@ public class CameraBehavior : MonoBehaviour {
 		//parent = transform.parent.gameObject;
 		lastPlayerPos = player.transform.position;
 		transform.position=player.transform.position+offset;
-		transform.LookAt (player.transform.position+offset);
+		transform.LookAt (player.transform.position);
 	}
 	
 	// Update is called once per frame
@@ -29,11 +28,11 @@ public class CameraBehavior : MonoBehaviour {
 		//rotation
 		if(!faceBack ()){
 			if(clockwise()){
-				//Debug.Log("Clockwise");
+				Debug.Log("Clockwise");
 				transform.RotateAround(player.transform.position,player.transform.up,Mathf.Acos (Vector3.Dot (transform.forward,player.transform.forward)));
 			}
 			else{
-				//Debug.Log("Counter");
+				Debug.Log("Counter");
 				transform.RotateAround(player.transform.position,-1f*player.transform.up,Mathf.Acos (Vector3.Dot (player.transform.forward,transform.forward)));
 			}
 		}
@@ -68,8 +67,8 @@ public class CameraBehavior : MonoBehaviour {
 		transform.position=pos;
 		
 		transform.LookAt(player.transform.position);*/
-	}	
-
+	}
+	
 	public bool faceBack(){
 		Vector3 thisPos= transform.forward;
 		Vector3 targetPos = player.transform.forward;

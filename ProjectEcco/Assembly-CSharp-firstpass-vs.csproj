@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_0;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_1;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -37,74 +37,19 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:49:18.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:57:30.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:44:46.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:45:59.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:08:34.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:35:54.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:46:29.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:46:13.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:28:35.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:07:10.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:07:27.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:12:25.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:44:25.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:47:16.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:46:54.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:47:03.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:03:18.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:20:31.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:23:09.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:55:12.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:43:12.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:43:51.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:44:19.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:45:42.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:24:13.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:52:16.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:06:36.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:03:51.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:12:33.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:24:41.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:46:37.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:12:05.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:43:47.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:47:25.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:37:24.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:51:13.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:46:47.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:53:44.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:52:30.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:09:24.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:02:14.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:07:18.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:07:01.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:29:25.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:36:36.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:44:05.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:45:37.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:03:35.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:26:36.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:12:46.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:06:46.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:22:03.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 10:04:17.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:53:42.txt" />
-     <None Include="Assets\Metrics\Metrics_11-05-2013 09:54:00.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
