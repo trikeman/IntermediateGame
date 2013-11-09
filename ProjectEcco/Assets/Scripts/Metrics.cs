@@ -27,7 +27,9 @@ public class Metrics : MonoBehaviour {
 void OnApplicationQuit ()
 	{
 		string dateTime = System.DateTime.Now.ToString (); 	//Get the time to tack on to the file name
-		dateTime = dateTime.Replace ("/", "-"); 			//Replace slashes with dashes, because Unity thinks they are directories..
+		dateTime = dateTime.Replace ("/", "-");				//Replace slashes with dashes, because Unity thinks they are directories.
+		dateTime = dateTime.Replace (":", "-");				//Replace colons with dashes, because Windows/Linx don't accept filenames with colons.
+		dateTime = dateTime.Replace (" ", "_");				//Replace spaces with underscores to make shell navigation easier.
 		string fileName = "Metrics_" + dateTime;			//Append file name
 		
 		//This is your main string output with all the data / variables that you want to save, plus accompanying text you want
