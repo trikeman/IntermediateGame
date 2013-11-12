@@ -5,6 +5,7 @@ public class LightMonsterAttack : MonoBehaviour {
 	
 	public GameObject beam;
 	public int force = 500;
+	public Metrics metrics;
 	
 	private MonsterFollow follow;
 	
@@ -18,6 +19,7 @@ public class LightMonsterAttack : MonoBehaviour {
 		if(follow.following&&Input.GetButtonDown("Fire2")){
 			GameObject newBeam = (GameObject)GameObject.Instantiate(beam, transform.position+follow.player.transform.forward.normalized,transform.rotation);
 			newBeam.rigidbody.AddForce(follow.player.transform.forward*force);
+			metrics.LightUses++;
 		}
 	}
 }

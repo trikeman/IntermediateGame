@@ -4,6 +4,7 @@ using System.Collections;
 public class RockMonsterAttack : MonoBehaviour {
 
 	public GameObject player;
+	public Metrics metrics;
 	
 	private MonsterFollow monsterFollow;
 	
@@ -17,10 +18,12 @@ public class RockMonsterAttack : MonoBehaviour {
 		if(Input.GetButtonDown ("Fire1")&&monsterFollow.following){
 			monsterFollow.following=false;
 			move();
+			metrics.RockUses++;
 			//follow.following=true;
 		}
 		if(Input.GetButtonDown ("Return")){
 			monsterFollow.following=true;
+			metrics.ReturnUses++;
 		}
 	}
 	
