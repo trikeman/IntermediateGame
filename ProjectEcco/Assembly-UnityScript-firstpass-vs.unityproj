@@ -50,33 +50,11 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
      <Compile Include="Assets\Standard Assets\Particles\Legacy Particles\TimedObjectDestructor.js" />
-<<<<<<< HEAD
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-=======
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:16:43.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:14:48.txt" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:16:07.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:38:09.txt" />
-     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:17:45.txt" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:17:27.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:16:28.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:18:07.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:37:29.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:17:59.txt" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:16:56.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:16:35.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:16:50.txt" />
-     <None Include="Assets\Metrics\Metrics_11-08-2013 14:17:08.txt" />
->>>>>>> e95f478818b8a84efa23fb99c700eced20ca31d0
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

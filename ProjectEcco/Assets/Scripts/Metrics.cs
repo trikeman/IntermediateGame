@@ -31,15 +31,11 @@ public class Metrics : MonoBehaviour {
 void OnApplicationQuit ()
 	{
 		string dateTime = System.DateTime.Now.ToString (); 	//Get the time to tack on to the file name
-<<<<<<< HEAD
+
 		dateTime = dateTime.Replace ("/", "-");				//Replace slashes with dashes, because Unity thinks they are directories.
 		dateTime = dateTime.Replace (":", "-");				//Replace colons with dashes, because Windows/Linx don't accept filenames with colons.
 		dateTime = dateTime.Replace (" ", "_");				//Replace spaces with underscores to make shell navigation easier.
-=======
-		dateTime = dateTime.Replace ("/", "-"); 			//Replace slashes with dashes, because Unity thinks they are directories.
-		dateTime = dateTime.Replace (":", "-");
-		dateTime = dateTime.Replace (" ", "_");
->>>>>>> origin/MergeFix
+
 		string fileName = "Metrics_" + dateTime;			//Append file name
 		
 		FileStream fs = File.Create ("../../Metrics/" + fileName + ".txt"); 	//Need to close this after so something else (StreamWriter) can access it
