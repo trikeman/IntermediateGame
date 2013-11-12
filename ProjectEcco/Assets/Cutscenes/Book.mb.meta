@@ -29,6 +29,7 @@ ModelImporter:
     100046: Title2
     100048: transform1
     100050: transform2
+    100052: pCube15
     400000: //RootNode
     400002: pCube1
     400004: pCube10
@@ -55,6 +56,7 @@ ModelImporter:
     400046: Title2
     400048: transform1
     400050: transform2
+    400052: pCube15
     2300000: pCube1
     2300002: pCube10
     2300004: pCube11
@@ -70,6 +72,7 @@ ModelImporter:
     2300024: pCube9
     2300026: pCylinder1
     2300028: Title2
+    2300030: pCube15
     3300000: pCube1
     3300002: pCube10
     3300004: pCube11
@@ -85,6 +88,7 @@ ModelImporter:
     3300024: pCube9
     3300026: pCylinder1
     3300028: Title2
+    3300030: pCube15
     4300000: pCube1
     4300002: Title2
     4300004: pCube3
@@ -100,6 +104,7 @@ ModelImporter:
     4300024: pCube13
     4300026: pCube14
     4300028: pCylinder1
+    4300030: pCube15
     7400000: Book Opening
     9500000: //RootNode
     11100000: //RootNode
