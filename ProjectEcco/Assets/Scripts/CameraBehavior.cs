@@ -52,10 +52,19 @@ public class CameraBehavior : MonoBehaviour {
 		Vector3 movement = player.transform.position-lastPlayerPos;
 		lastPlayerPos=player.transform.position;
 		transform.position+=movement;
+<<<<<<< HEAD
 		
 		/*if((transform.position-player.transform.position).magnitude<offset.magnitude){
 			transform.position = transform.position-transform.forward;	
 		}*/
+=======
+		if((transform.position-player.transform.position).magnitude<offset.magnitude-1){
+			transform.position-=player.transform.forward;	
+		}
+		else if((transform.position-player.transform.position).magnitude>offset.magnitude+1){
+			transform.position+=player.transform.forward;
+		}
+>>>>>>> origin/MergeFix
 		//transform.position=Vector3.Lerp (transform.position,player.transform.position+offset,Time.deltaTime*speed);
 		
 		//Look at player
