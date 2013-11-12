@@ -17,6 +17,11 @@ public class LightBeam : MonoBehaviour {
 		if(collision.gameObject.tag=="Enemy"){
 		
 		}
+		else if(collision.gameObject.tag=="LightBall"){
+			Debug.Log("Light Beam collision w/ Light Ball");
+			LightBallTemp change=(LightBallTemp)collision.gameObject.GetComponent ("LightBallTemp");
+			change.Lit=true;
+		}
 		else{
 			Destroy(this.gameObject);
 		}
