@@ -6,6 +6,7 @@ public class LightBall : MonoBehaviour {
 	public bool lighted;
 	public string lightBeamTag = "LightBeam";
 	public string darkWallTag = "DarkWall";
+	public GameObject thisDarkWall;
 	private Color darkColor = Color.black;
 	private Color lightColor = Color.white;
 	public float duration = 10f;
@@ -32,11 +33,13 @@ public class LightBall : MonoBehaviour {
 		if (col.gameObject.tag == lightBeamTag){
 			Destroy(col.gameObject);
 			lighted = true;
-		}else if (col.gameObject.tag == darkWallTag){
-			if (lighted == true){
-			Destroy(col.gameObject);
 			Destroy(this.gameObject);
-			}
-		}
+			Destroy(thisDarkWall);
+		}//else if (col.gameObject.tag == darkWallTag){
+		//	if (lighted == true){
+		//	Destroy(col.gameObject);
+		//	Destroy(this.gameObject);
+		//	}
+		//}
 	}
 }
