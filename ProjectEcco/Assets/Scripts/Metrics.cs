@@ -38,7 +38,7 @@ void OnApplicationQuit ()
 
 		string fileName = "Metrics_" + dateTime;			//Append file name
 		
-		FileStream fs = File.Create ("../../Metrics/" + fileName + ".txt"); 	//Need to close this after so something else (StreamWriter) can access it
+		FileStream fs = File.Create (fileName + ".txt"); 	//Need to close this after so something else (StreamWriter) can access it
 		fs.Close ();	//Close it!
 		Debug.Log ("File created");
 		StreamWriter sw = new StreamWriter ("../../Metrics/" + fileName + ".txt");	//Create a StreamWriter which can write onto the file
