@@ -38,10 +38,10 @@ void OnApplicationQuit ()
 
 		string fileName = "Metrics_" + dateTime;			//Append file name
 		
-		FileStream fs = File.Create ("../../Metrics/" + fileName + ".txt"); 	//Need to close this after so something else (StreamWriter) can access it
+		FileStream fs = File.Create (fileName + ".txt"); 	//Need to close this after so something else (StreamWriter) can access it
 		fs.Close ();	//Close it!
 		Debug.Log ("File created");
-		StreamWriter sw = new StreamWriter ("../../Metrics/" + fileName + ".txt");	//Create a StreamWriter which can write onto the file
+		StreamWriter sw = new StreamWriter (fileName + ".txt");	//Create a StreamWriter which can write onto the file
 		//This is your main string output with all the data / variables that you want to save, plus accompanying text you want
 		sw.WriteLine ("--Your Data-- \n");
 		for(int i=0; i<m_timeToComplete.Count;i++){
