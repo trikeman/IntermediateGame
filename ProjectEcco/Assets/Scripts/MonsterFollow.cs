@@ -6,6 +6,7 @@ public class MonsterFollow : MonoBehaviour {
 	public bool following = false;
 	public GameObject player;
 	public float jumpForce = 3000;
+	public float speed;
 
 	// Use this for initialization
 	void Start () {
@@ -25,13 +26,14 @@ public class MonsterFollow : MonoBehaviour {
 			following=true;
 		}
 		if(following&&jump()){
-			transform.position=new Vector3(transform.position.x,player.transform.position.y+3,transform.position.z);//rigidbody.AddForce (jumpForce*Vector3.up);
+			//transform.position=Vector3.Lerp (transform.position,new Vector3(transform.position.x,player.transform.position.y+1,transform.position.z), speed);//rigidbody.AddForce (jumpForce*Vector3.up);
+			rigidbody.AddForce(player.transform.up.normalized*jumpForce);
 		}
 		if(following&&distance ()>10){
 			transform.position=player.transform.position-5*player.transform.forward;
 		}
-		else if(following&&(distance ()>2)){
-			transform.position=Vector3.Lerp(transform.position,player.transform.position,.01f);
+		else if(following&&(distance ()>1)){
+			transform.position=Vector3.Lerp(transform.position,player.transform.position,speed);
 		}
 		
 	}
