@@ -15,7 +15,7 @@ public class EndGame : MonoBehaviour {
 	
 		void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player"){
-			Application.LoadLevel("Ending Scene");
+			Application.LoadLevel("EndingScene");
 			
 		} 
 	}
