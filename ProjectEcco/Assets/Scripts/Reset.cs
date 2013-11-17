@@ -10,10 +10,10 @@ public class Reset : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if (Input.GetKeyDown(KeyCode.Backspace)){
-			Application.LoadLevel("BeautifulCorner");
-		}
-		if (Input.GetKeyDown(KeyCode.Escape)){
+//	if (Input.GetKeyDown(KeyCode.Backspace)){
+		//	Application.LoadLevel("BeautifulCorner");
+		//}
+		if (Input.GetKeyDown(KeyCode.R)){
 			Application.Quit();		
 		}
 	}

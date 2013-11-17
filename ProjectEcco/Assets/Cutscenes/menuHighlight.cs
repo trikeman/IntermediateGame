@@ -24,7 +24,7 @@ public class menuHighlight : MonoBehaviour {
 	}
 	
 	void Update(){
-		if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
+		if (Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown (KeyCode.DownArrow)){
 			if (playGame.renderer.material.color == Color.yellow){
 				playGame.renderer.material.color = startcolor;
 				howToPlay.renderer.material.color = Color.yellow;
@@ -34,7 +34,7 @@ public class menuHighlight : MonoBehaviour {
 				credits.renderer.material.color = Color.yellow;
 			}
 		}
-		else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
+		else if (Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown (KeyCode.W)){
 			if (howToPlay.renderer.material.color == Color.yellow){
 				howToPlay.renderer.material.color = startcolor;
 				playGame.renderer.material.color = Color.yellow;
@@ -44,7 +44,7 @@ public class menuHighlight : MonoBehaviour {
 				howToPlay.renderer.material.color = Color.yellow;
 			}
 		}
-		if (Input.GetKeyDown(KeyCode.Return)){
+		if (Input.GetKeyDown (KeyCode.Return)||Input.GetButton("Jump")){
 			if (playGame.renderer.material.color == Color.yellow){
 				StartCoroutine(DoAnimation());
 			}
