@@ -4,6 +4,7 @@ using System.Collections;
 public class VoiceTrigger : MonoBehaviour {
 	
 	public AudioClip thisEvent;
+	private bool hasPlayed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +18,11 @@ public class VoiceTrigger : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player"){
+			if(!hasPlayed){
 			audio.PlayOneShot(thisEvent, 0.8F);
-			Destroy(this.gameObject);
+			//Destroy(this.gameObject);
+				hasPlayed = true;
+			}
 		}
 	}
 }
