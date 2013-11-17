@@ -16,15 +16,19 @@ public class menuHighlight : MonoBehaviour {
 
 	private Color startcolor;
 	private Color backStartColor;
+	public int VertTimer = 0;
+	public int SelectTimer=0;
+	private const int MAXTIME=15;
 	
 		void Start(){
 		    startcolor = howToPlay.renderer.material.color;
 			backStartColor = backHTP.renderer.material.color;
 			playGame.renderer.material.color = Color.yellow;
+			//MAXTIME =1000;
 	}
 	
 	void Update(){
-		if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
+		if (Input.GetAxis("Vertical")<0&&VertTimer<=0){//Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
 			if (playGame.renderer.material.color == Color.yellow){
 				playGame.renderer.material.color = startcolor;
 				howToPlay.renderer.material.color = Color.yellow;
@@ -33,8 +37,9 @@ public class menuHighlight : MonoBehaviour {
 				howToPlay.renderer.material.color = startcolor;
 				credits.renderer.material.color = Color.yellow;
 			}
+			VertTimer=MAXTIME;
 		}
-		else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
+		else if (Input.GetAxis ("Vertical")>0&&VertTimer<=0){//Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
 			if (howToPlay.renderer.material.color == Color.yellow){
 				howToPlay.renderer.material.color = startcolor;
 				playGame.renderer.material.color = Color.yellow;
@@ -43,8 +48,11 @@ public class menuHighlight : MonoBehaviour {
 				credits.renderer.material.color = startcolor;
 				howToPlay.renderer.material.color = Color.yellow;
 			}
+			VertTimer=MAXTIME;
 		}
-		if (Input.GetKeyDown(KeyCode.Return)){
+		VertTimer--;
+		if (Input.GetButton ("Jump")&&SelectTimer<=0){//Input.GetKeyDown(KeyCode.Return)){
+			SelectTimer=MAXTIME;
 			if (playGame.renderer.material.color == Color.yellow){
 				StartCoroutine(DoAnimation());
 			}
@@ -73,6 +81,7 @@ public class menuHighlight : MonoBehaviour {
 				howToPlay.renderer.material.color = Color.yellow;
 			}
 		}
+		SelectTimer--;
 	}
 
 /*void OnMouseEnter()
