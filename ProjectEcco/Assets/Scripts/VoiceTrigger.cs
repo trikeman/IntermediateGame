@@ -19,7 +19,7 @@ public class VoiceTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player"){
 			if(!hasPlayed){
-			audio.PlayOneShot(thisEvent, 0.8F);
+			audio.PlayOneShot(thisEvent, 1F);
 			//Destroy(this.gameObject);
 				hasPlayed = true;
 			}
