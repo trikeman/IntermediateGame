@@ -1,6 +1,6 @@
 //Maya ASCII 2012 scene
 //Name: Hale.ma
-//Last modified: Tue, Nov 19, 2013 07:49:37 AM
+//Last modified: Tue, Nov 19, 2013 09:47:49 AM
 //Codeset: UTF-8
 requires maya "2012";
 requires "stereoCamera" "10.0";
@@ -13,8 +13,8 @@ fileInfo "osv" "Mac OS X 10.9";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1746.1409509744669 -216.14137366536804 -43.461222195890365 ;
-	setAttr ".r" -type "double3" 18.599999999998793 987.19999999998129 -7.6333312355124402e-14 ;
+	setAttr ".t" -type "double3" -4937.4618593130253 1939.5556724490632 2108.737483303627 ;
+	setAttr ".r" -type "double3" -15.000000000010882 1374.4000000000469 0 ;
 	setAttr ".rp" -type "double3" -4.662353909187009e-16 -5.9678130037593716e-14 1.1935626007518743e-13 ;
 	setAttr ".rpt" -type "double3" -3.0373707504980355e-12 3.2825316116735927e-13 2.4570094599058901e-12 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -23,7 +23,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 3.2808398950131235;
 	setAttr ".fcp" 328083.98950131232;
 	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 1930.3669651589416;
+	setAttr ".coi" 5664.8263876401443;
 	setAttr ".ow" 0.32808398950131235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -1804,8 +1804,11 @@ createNode mesh -n "pasted__polySurfaceShape1" -p "pasted__Hale";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pasted__polySurface4" -p "pasted__Hale";
-createNode mesh -n "pasted__polySurfaceShape4" -p "pasted__polySurface4";
+createNode transform -n "transform11" -p "pasted__polySurface4";
+	setAttr ".v" no;
+createNode mesh -n "pasted__polySurfaceShape4" -p "transform11";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -1839,8 +1842,11 @@ createNode mesh -n "pasted__HaleShape" -p "pasted__transform1";
 		-5.4836574 0 0.26737568 0.41490006 0 0.2405078 0.40589863 0 0.2405078 0.42390215 
 		0 -0.25297281 0.41490006 0 -0.21137176 0.40589863 0 -0.21137176 0.42390215 0;
 createNode transform -n "polySurface8";
-createNode mesh -n "polySurfaceShape9" -p "polySurface8";
+createNode transform -n "transform10" -p "polySurface8";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape9" -p "transform10";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -1850,9 +1856,120 @@ createNode mesh -n "polySurfaceShape9" -p "polySurface8";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "polySurface9";
-createNode mesh -n "polySurfaceShape10" -p "polySurface9";
+createNode transform -n "transform9" -p "polySurface9";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape10" -p "transform9";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface14";
+createNode transform -n "polySurface16" -p "polySurface14";
+createNode transform -n "polySurface20" -p "polySurface16";
+createNode mesh -n "polySurfaceShape21" -p "polySurface20";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface21" -p "polySurface16";
+createNode mesh -n "polySurfaceShape22" -p "polySurface21";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface15" -p "polySurface21";
+createNode mesh -n "polySurfaceShape16" -p "polySurface15";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "transform13" -p "polySurface16";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape17" -p "transform13";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface18" -p "polySurface14";
+createNode transform -n "polySurface22" -p "polySurface18";
+createNode mesh -n "polySurfaceShape23" -p "polySurface22";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface23" -p "polySurface18";
+createNode mesh -n "polySurfaceShape24" -p "polySurface23";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface19" -p "polySurface23";
+createNode mesh -n "polySurfaceShape20" -p "polySurface19";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "transform14" -p "polySurface18";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape19" -p "transform14";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "transform12" -p "polySurface14";
+	setAttr ".v" no;
+createNode mesh -n "polySurfaceShape15" -p "transform12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -1958,7 +2075,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 200 -size 4000 -divisions 1 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 89 -ast 1 -aet 89 ";
 	setAttr ".st" 6;
 createNode displayLayer -n "HalePictures";
 	setAttr ".dt" 2;
@@ -1969,9 +2086,9 @@ createNode displayLayer -n "HaleBodyModel";
 createNode lambert -n "HaleTextureMap";
 createNode shadingEngine -n "lambert5SG";
 	setAttr ".ihi" 0;
-	setAttr -s 14 ".dsm";
+	setAttr -s 22 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 14 ".gn";
+	setAttr -s 22 ".gn";
 createNode materialInfo -n "materialInfo4";
 createNode file -n "file4";
 	setAttr ".ftn" -type "string" "/Users/zmziauddin/IntermediateGame/MayaFiles/Hale_texture.jpg";
@@ -2000,27 +2117,27 @@ createNode groupId -n "groupId2";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts2";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 18 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]";
+	setAttr ".ic" -type "componentList" 1 "f[0:17]";
 createNode groupId -n "groupId3";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts3";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 116 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]";
+	setAttr ".ic" -type "componentList" 1 "f[0:115]";
 createNode groupId -n "groupId4";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts4";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 100 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]";
+	setAttr ".ic" -type "componentList" 1 "f[0:99]";
 createNode groupId -n "groupId5";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts5";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 15 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]";
+	setAttr ".ic" -type "componentList" 1 "f[0:14]";
 createNode groupId -n "groupId6";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts6";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 15 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]";
+	setAttr ".ic" -type "componentList" 1 "f[0:14]";
 createNode groupParts -n "pasted__groupParts5";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:14]";
@@ -2030,9 +2147,9 @@ createNode groupId -n "pasted__groupId1";
 	setAttr ".ihi" 0;
 createNode shadingEngine -n "pasted__lambert5SG";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 2 ".gn";
+	setAttr -s 4 ".gn";
 createNode materialInfo -n "pasted__materialInfo4";
 createNode lambert -n "pasted__HaleTextureMap";
 createNode file -n "pasted__file4";
@@ -2086,12 +2203,12 @@ createNode groupId -n "groupId7";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts7";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 9 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]";
+	setAttr ".ic" -type "componentList" 1 "f[0:8]";
 createNode groupId -n "groupId8";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts8";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 9 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]";
+	setAttr ".ic" -type "componentList" 1 "f[0:8]";
 createNode polyUnite -n "polyUnite1";
 	setAttr -s 2 ".ip";
 	setAttr -s 2 ".im";
@@ -2123,12 +2240,12 @@ createNode groupId -n "groupId11";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts11";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 39 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]";
+	setAttr ".ic" -type "componentList" 1 "f[0:38]";
 createNode groupId -n "groupId12";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts12";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 77 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]";
+	setAttr ".ic" -type "componentList" 1 "f[0:76]";
 createNode polyChipOff -n "polyChipOff4";
 	setAttr ".ics" -type "componentList" 3 "f[19:39]" "f[45:60]" "f[75:76]";
 	setAttr ".ix" -type "matrix" 30.62709998268415 0 0 0 0 30.62709998268415 0 0 0 0 30.62709998268415 0
@@ -2144,12 +2261,12 @@ createNode groupId -n "groupId13";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts13";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 38 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]";
+	setAttr ".ic" -type "componentList" 1 "f[0:37]";
 createNode groupId -n "groupId14";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts14";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 39 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]";
+	setAttr ".ic" -type "componentList" 1 "f[0:38]";
 createNode animCurveTU -n "Hale_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -2314,9 +2431,1609 @@ createNode animCurveTU -n "polySurface9_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
+createNode polyCut -n "polyCut1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" -75.301474865350045 212.81950616005139 -47.01220036025849 ;
+	setAttr ".ro" -type "double3" 83.20381253334854 -79.200000000068272 179.99999999975904 ;
+	setAttr ".ps" -type "double2" 10.162005086583415 297.61165909254021 ;
+createNode polyCut -n "polyCut2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[2]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" -42.708281328348406 214.91488395718449 -108.65968057982526 ;
+	setAttr ".ro" -type "double3" 72.547121382695437 -14.799999999967344 180 ;
+	setAttr ".ps" -type "double2" 65.884594153857293 297.56798931932826 ;
+createNode polyCut -n "polyCut3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[3]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" 26.693513153887729 206.7953076136908 -97.3526914882939 ;
+	setAttr ".ro" -type "double3" 81.909043839767193 6.8000000002946646 180 ;
+	setAttr ".ps" -type "double2" 70.814919659471883 297.56798931932826 ;
+createNode polyCut -n "polyCut4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[6]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" 77.762674224723071 210.80492504848903 -41.68524612247235 ;
+	setAttr ".ro" -type "double3" 78.730964545752229 70.800000000008566 180 ;
+	setAttr ".ps" -type "double2" 16.163218741028953 297.61165909254021 ;
+createNode polyCut -n "polyCut5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[6]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" 65.597859289502438 205.39350155574249 54.383369644502977 ;
+	setAttr ".ro" -type "double3" -94.532626964502313 81.999999999953388 9.807230166896444e-11 ;
+	setAttr ".ps" -type "double2" 16.163218741028953 298.52125913765173 ;
+createNode polyCut -n "polyCut6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[1]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" 23.41303910172757 209.27562799741273 116.80779581802751 ;
+	setAttr ".ro" -type "double3" -99.469035454225335 19.60000000001806 0 ;
+	setAttr ".ps" -type "double2" 70.814919659471883 297.73672509381151 ;
+createNode polyCut -n "polyCut7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[3]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" -42.977679001979602 206.83200169719115 114.94739294967576 ;
+	setAttr ".ro" -type "double3" -99.537227591150383 12.00000000000983 0 ;
+	setAttr ".ps" -type "double2" 65.884594153857293 297.73672509381151 ;
+createNode polyCut -n "polyCut8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" -81.974097613275788 203.86152886635273 50.424528174769868 ;
+	setAttr ".ro" -type "double3" -98.895063957021264 -72.800000000026856 3.2388727895823465e-11 ;
+	setAttr ".ps" -type "double2" 10.162005086583415 298.52125913765173 ;
+createNode polyCut -n "polyCut9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[4]" "f[27]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".pc" -type "double3" 2.3526862867536398 199.82960192834761 323.98529988767109 ;
+	setAttr ".ro" -type "double3" -180 0 0 ;
+	setAttr ".ps" -type "double2" 10.162005086583415 298.52125913765173 ;
+createNode animCurveTU -n "polySurface10_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 46 1 53 1 57 1 62 1 67.8 1 75 1;
+	setAttr -s 15 ".kit[0:14]"  9 9 9 1 1 9 1 1 
+		1 9 9 9 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface10_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 -6.9920137254907608 11 -12.225472797456458
+		 16 -6.9920137254907608 20 -0.75898001138869853 24 5.6462812522455756 29 -0.75898001138869853
+		 34 -6.9920137254907608 42 5.7743654918759351 46 -0.23505059929223043 53 -6.3814872580780149
+		 57 -3.0739283480077488 62 -0.23505059929223043 67.8 2.6360815791292143 75 5.7743654918759351;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  0.0011181700974702835 0.0011181700974702835 
+		1 0.0011181700974702835 0.0011181700974702835 1 0.0012370310723781586 1 0.0020016678608953953 
+		0.0016675402875989676 1 1;
+	setAttr -s 15 ".kiy[3:14]"  -0.99999940395355225 -0.99999940395355225 
+		0 -0.99999940395355225 -0.99999940395355225 0 -0.99999922513961792 0 0.99999797344207764 
+		-0.99999862909317017 0 0;
+	setAttr -s 15 ".kox[3:14]"  0.0011181700974702835 0.0011181700974702835 
+		1 0.0011181700974702835 0.0011181700974702835 1 0.0012370311887934804 1 0.0020016678608953953 
+		0.0016675402875989676 1 1;
+	setAttr -s 15 ".koy[3:14]"  -0.99999940395355225 -0.99999940395355225 
+		0 -0.99999940395355225 -0.99999940395355225 0 -0.99999922513961792 0 0.99999803304672241 
+		-0.99999862909317017 0 0;
+createNode animCurveTL -n "polySurface10_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 1.1540833947244555 11 3.4452649627872289
+		 16 1.1540833947244555 20 -0.1275631164543001 24 0.69894061122143691 29 -0.1275631164543001
+		 34 1.1540833947244555 42 0.47009730679483663 46 8.6948960485422191 53 25.159745667882643
+		 57 15.205056948044891 62 8.6948960485422191 67.8 4.0447014715437009 75 0.47009730679483663;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  0.0039677815511822701 0.0039677815511822701 
+		1 0.0039677815511822701 0.0039677815511822701 1 0.00060904782731086016 1 0.00074723712168633938 
+		0.0007121546077542007 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0.99999213218688965 0.99999213218688965 
+		0 0.99999213218688965 0.99999213218688965 0 0.9999997615814209 0 -0.99999970197677612 
+		0.9999997615814209 0 0;
+	setAttr -s 15 ".kox[3:14]"  0.0039677815511822701 0.0039677815511822701 
+		1 0.0039677815511822701 0.0039677815511822701 1 0.00060904788551852107 1 0.00074723700527101755 
+		0.00071215466596186161 1 1;
+	setAttr -s 15 ".koy[3:14]"  0.99999207258224487 0.99999207258224487 
+		0 0.99999207258224487 0.99999207258224487 0 0.99999982118606567 0 -0.99999964237213135 
+		0.9999997615814209 0 0;
+createNode animCurveTL -n "polySurface10_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 1.1515717817525979 11 1.2708714076449268
+		 16 1.1515717817525979 20 1.015515827991003 24 0.056633008822744059 29 1.015515827991003
+		 34 1.1515717817525979 42 5.1645919034137879 46 20.318410745772574 53 24.849838973886467
+		 57 23.673919687175268 62 20.318410745772574 67.8 14.63652499126834 75 5.1645919034137879;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  0.015276462770998478 0.015276462770998478 
+		1 0.015276462770998478 0.015276462770998478 1 0.00076388043817132711 1 0.0027150609530508518 
+		0.0014723099302500486 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0.99988335371017456 0.99988335371017456 
+		0 0.99988335371017456 0.99988335371017456 0 0.99999970197677612 0 -0.99999624490737915 
+		0.99999892711639404 0 0;
+	setAttr -s 15 ".kox[3:14]"  0.015276462770998478 0.015276462770998478 
+		1 0.015276462770998478 0.015276462770998478 1 0.00076388049637898803 1 0.0027150611858814955 
+		0.0014723099302500486 1 1;
+	setAttr -s 15 ".koy[3:14]"  0.99988329410552979 0.99988329410552979 
+		0 0.99988329410552979 0.99988329410552979 0 0.9999997615814209 0 -0.99999630451202393 
+		0.99999892711639404 0 0;
+createNode animCurveTA -n "polySurface10_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 -2.8348951617870242 11 -3.122131410786452
+		 16 -2.8348951617870242 20 -2.2902536412289658 24 -0.71607611117611925 29 -2.2902536412289658
+		 34 -2.8348951617870242 42 -13.689117653118505 46 -59.157782129564623 53 -105.24987258665253
+		 57 -80.112479967180576 62 -59.157782129564623 67.8 -39.354524016249485 75 -13.689117653118505;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  0.9959532618522644 0.9959532618522644 1 
+		0.9959532618522644 0.9959532618522644 1 0.27569493651390076 1 0.4225023090839386 
+		0.37020453810691833 1 1;
+	setAttr -s 15 ".kiy[3:14]"  -0.089872747659683228 -0.089872747659683228 
+		0 -0.089872747659683228 -0.089872747659683228 0 -0.96124517917633057 0 0.90636181831359863 
+		-0.92895030975341797 0 0;
+	setAttr -s 15 ".kox[3:14]"  0.9959532618522644 0.9959532618522644 1 
+		0.9959532618522644 0.9959532618522644 1 0.27569493651390076 1 0.4225023090839386 
+		0.37020450830459595 1 1;
+	setAttr -s 15 ".koy[3:14]"  -0.089872747659683228 -0.089872747659683228 
+		0 -0.089872747659683228 -0.089872747659683228 0 -0.96124517917633057 0 0.90636181831359863 
+		-0.92895030975341797 0 0;
+createNode animCurveTA -n "polySurface10_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 1.5108363746545257 11 0.75515166408078649
+		 16 1.5108363746545257 20 2.2527396034430933 24 0.94159986275488827 29 2.2527396034430933
+		 34 1.5108363746545257 42 -12.6559738507143 46 -12.655973850714298 53 -12.655973850714306
+		 57 -12.655973850714302 62 -12.655973850714298 67.8 -12.655973850714295 75 -12.6559738507143;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface10_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 -17.455642617247779 11 -31.904841616378949
+		 16 -17.455642617247779 20 -0.98428371714972762 24 14.902734840988431 29 -0.98428371714972762
+		 34 -17.455642617247779 42 14.720617172978681 46 14.720617172978697 53 14.720617172978685
+		 57 14.72061717297869 62 14.720617172978697 67.8 14.720617172978704 75 14.720617172978681;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  0.59911000728607178 0.59911000728607178 
+		1 0.59911000728607178 0.59911000728607178 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  -0.8006666898727417 -0.8006666898727417 
+		0 -0.8006666898727417 -0.8006666898727417 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  0.59911006689071655 0.59911006689071655 
+		1 0.59911006689071655 0.59911006689071655 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  -0.80066674947738647 -0.80066674947738647 
+		0 -0.80066674947738647 -0.80066674947738647 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface10_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 46 1 53 1 57 1 62 1 67.8 1 75 1;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface10_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 46 1 53 1 57 1 62 1 67.8 1 75 1;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface10_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 46 1 53 1 57 1 62 1 67.8 1 75 1;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface12_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 1 1 9 1 1 
+		1 9 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface12_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface12_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface12_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface12_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface12_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -7.2661604188326407 11 -13.557338384558596
+		 16 -7.2661604188326407 20 6.6435487800889588 24 19.815999084498262 29 6.6435487800889588
+		 34 -7.2661604188326407 42 0 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.86956608295440674 0.86956608295440674 
+		1 0.86956608295440674 0.86956608295440674 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  -0.49381649494171143 -0.49381649494171143 
+		0 -0.49381649494171143 -0.49381649494171143 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.86956608295440674 0.86956608295440674 
+		1 0.86956608295440674 0.86956608295440674 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  -0.49381652474403381 -0.49381652474403381 
+		0 -0.49381652474403381 -0.49381652474403381 0 0 0;
+createNode animCurveTA -n "polySurface12_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface12_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface12_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface12_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface13_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 46 1 53 1 57 1 62 1 67.8 1 75 1;
+	setAttr -s 15 ".kit[0:14]"  9 9 9 1 1 9 1 1 
+		1 9 9 9 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface13_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 4.5835426845944909 11 7.8415789721416509
+		 16 4.5835426845944909 20 -3.2369344113175238 24 -9.4326441902309615 29 -3.2369344113175238
+		 34 4.5835426845944909 42 0 46 -0.29010928424754018 53 -0.96533874878640247 57 -0.59708666532176202
+		 62 -0.29010928424754018 67.8 0 75 0;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  0.0017432899912819266 0.0017432899912819266 
+		1 0.0017432899912819266 0.0017432899912819266 1 0.015575212426483631 1 0.018217669799923897 
+		0.015575212426483631 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0.99999850988388062 0.99999850988388062 
+		0 0.99999850988388062 0.99999850988388062 0 -0.99987870454788208 0 0.99983406066894531 
+		-0.99987870454788208 0 0;
+	setAttr -s 15 ".kox[3:14]"  0.0017432899912819266 0.0017432899912819266 
+		1 0.0017432899912819266 0.0017432899912819266 1 0.015575212426483631 1 0.018217671662569046 
+		0.015575212426483631 1 1;
+	setAttr -s 15 ".koy[3:14]"  0.99999850988388062 0.99999850988388062 
+		0 0.99999850988388062 0.99999850988388062 0 -0.99987870454788208 0 0.99983406066894531 
+		-0.99987870454788208 0 0;
+createNode animCurveTL -n "polySurface13_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 0.41802056557543155 11 1.206388738854306
+		 16 0.41802056557543155 20 0.26415762495262957 24 2.3262159486989824 29 0.26415762495262957
+		 34 0.41802056557543155 42 0.69947290409398166 46 9.1714616267739206 53 24.935248033760107
+		 57 15.506977491742976 62 9.1714616267739206 67.8 4.1636154119469371 75 0.69947290409398166;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  0.011330749839544296 0.011330749839544296 
+		1 0.011330749839544296 0.011330749839544296 1 0.00062045367667451501 1 0.00078046898124739528 
+		0.0007239285041578114 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0.99993574619293213 0.99993574619293213 
+		0 0.99993574619293213 0.99993574619293213 0 0.9999997615814209 0 -0.99999970197677612 
+		0.9999997615814209 0 0;
+	setAttr -s 15 ".kox[3:14]"  0.011330749839544296 0.011330749839544296 
+		1 0.011330749839544296 0.011330749839544296 1 0.00062045373488217592 1 0.00078046892303973436 
+		0.0007239285041578114 1 1;
+	setAttr -s 15 ".koy[3:14]"  0.9999358057975769 0.9999358057975769 0 
+		0.9999358057975769 0.9999358057975769 0 0.99999988079071045 0 -0.99999964237213135 
+		0.9999997615814209 0 0;
+createNode animCurveTL -n "polySurface13_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 0 11 0 16 0 20 -3.4024574325528794
+		 24 -2.9733216116048324 29 -3.4024574325528794 34 0 42 -7.659738531252823 46 -20.118618590535846
+		 53 -25.274448238976579 57 -23.895295792635121 62 -20.118618590535846 67.8 -15.06474447465061
+		 75 -7.659738531252823;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 0.0008536714012734592 1 0.0023862530943006277 
+		0.0014728305395692587 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 -0.99999958276748657 0 0.99999713897705078 
+		-0.99999892711639404 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 0.00085367145948112011 1 0.0023862530943006277 
+		0.0014728306559845805 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 -0.99999964237213135 0 0.99999719858169556 
+		-0.99999892711639404 0 0;
+createNode animCurveTA -n "polySurface13_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 0 11 0 16 0 20 8.9030334100514477
+		 24 9.5871612175306087 29 8.9030334100514477 34 0 42 19.136979045967845 46 58.128214586610916
+		 53 101.13888883779391 57 77.68201790825664 62 58.128214586610916 67.8 39.64887300376644
+		 75 19.136979045967845;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 0.30498591065406799 1 0.4468904435634613 
+		0.39275270700454712 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0.95235693454742432 0 -0.89458870887756348 
+		0.91964411735534668 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 0.30498588085174561 1 0.44689041376113892 
+		0.39275270700454712 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0.95235681533813477 0 -0.89458870887756348 
+		0.91964411735534668 0 0;
+createNode animCurveTA -n "polySurface13_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 0 11 0 16 0 20 -3.6473868327234409
+		 24 -0.74273802386651555 29 -3.6473868327234409 34 0 42 0 46 0 53 0 57 0 62 0 67.8 0
+		 75 0;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface13_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 0 7 11.767095180254838 11 19.946842767807617
+		 16 11.767095180254838 20 -7.9992072961349123 24 -25.712785258659537 29 -7.9992072961349123
+		 34 11.767095180254838 42 0 46 0 53 0 57 0 62 0 67.8 0 75 0;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  0.76739108562469482 0.76739108562469482 
+		1 0.76739108562469482 0.76739108562469482 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0.64117932319641113 0.64117932319641113 
+		0 0.64117932319641113 0.64117932319641113 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  0.76739108562469482 0.76739108562469482 
+		1 0.76739108562469482 0.76739108562469482 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0.64117932319641113 0.64117932319641113 
+		0 0.64117932319641113 0.64117932319641113 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface13_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 46 1 53 1 57 1 62 1 67.8 1 75 1;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface13_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 46 1 53 1 57 1 62 1 67.8 1 75 1;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface13_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 46 1 53 1 57 1 62 1 67.8 1 75 1;
+	setAttr -s 15 ".kit[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kot[0:14]"  18 18 18 1 1 18 1 1 
+		1 18 18 18 1 1 1;
+	setAttr -s 15 ".kix[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[3:14]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[3:14]"  0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface3_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 1 1 9 1 1 
+		1 9 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface3_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface3_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface3_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface3_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface3_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -7.2661604188326407 11 -13.557338384558596
+		 16 -7.2661604188326407 20 6.6435487800889588 24 19.815999084498262 29 6.6435487800889588
+		 34 -7.2661604188326407 42 0 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.86956608295440674 0.86956608295440674 
+		1 0.86956608295440674 0.86956608295440674 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  -0.49381649494171143 -0.49381649494171143 
+		0 -0.49381649494171143 -0.49381649494171143 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.86956608295440674 0.86956608295440674 
+		1 0.86956608295440674 0.86956608295440674 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  -0.49381652474403381 -0.49381652474403381 
+		0 -0.49381652474403381 -0.49381652474403381 0 0 0;
+createNode animCurveTA -n "polySurface3_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 3.7775274504547571 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface3_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface3_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface3_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "pasted__polySurface4_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "pasted__polySurface4_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "pasted__polySurface4_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "pasted__polySurface4_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pasted__polySurface4_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pasted__polySurface4_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pasted__polySurface4_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "pasted__polySurface4_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "pasted__polySurface4_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode animCurveTU -n "pasted__polySurface4_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+createNode polyUnite -n "polyUnite3";
+	setAttr -s 3 ".ip";
+	setAttr -s 3 ".im";
+createNode groupId -n "groupId15";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts15";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:14]";
+createNode groupId -n "groupId16";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts16";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[15:70]";
+createNode polySeparate -n "polySeparate5";
+	setAttr ".ic" 5;
+	setAttr -s 4 ".out";
+createNode groupId -n "groupId17";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts17";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 15 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]";
+createNode groupId -n "groupId18";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts18";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 13 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]";
+createNode groupId -n "groupId20";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts20";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 13 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]";
+createNode groupId -n "groupId21";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts21";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 15 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]";
+createNode polyChipOff -n "polyChipOff5";
+	setAttr ".ics" -type "componentList" 3 "f[1:3]" "f[7:9]" "f[12]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".rs" 1731678774;
+	setAttr ".dup" no;
+createNode polySeparate -n "polySeparate6";
+	setAttr ".ic" 2;
+	setAttr -s 2 ".out";
+createNode groupId -n "groupId22";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts22";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 6 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]";
+createNode groupId -n "groupId23";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts23";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 7 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]";
+createNode polyChipOff -n "polyChipOff6";
+	setAttr ".ics" -type "componentList" 2 "f[2]" "f[7:12]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".rs" 218836088;
+	setAttr ".dup" no;
+createNode polySeparate -n "polySeparate7";
+	setAttr ".ic" 2;
+	setAttr -s 2 ".out";
+createNode groupId -n "groupId24";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts24";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 6 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]";
+createNode groupId -n "groupId25";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts25";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 7 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]";
+createNode deleteComponent -n "deleteComponent1";
+	setAttr ".dc" -type "componentList" 1 "f[7]";
+createNode deleteComponent -n "deleteComponent2";
+	setAttr ".dc" -type "componentList" 1 "f[10]";
+createNode deleteComponent -n "deleteComponent3";
+	setAttr ".dc" -type "componentList" 1 "f[5]";
+createNode deleteComponent -n "deleteComponent4";
+	setAttr ".dc" -type "componentList" 1 "f[7]";
+createNode deleteComponent -n "deleteComponent5";
+	setAttr ".dc" -type "componentList" 1 "f[5]";
+createNode deleteComponent -n "deleteComponent6";
+	setAttr ".dc" -type "componentList" 1 "f[9]";
+createNode animCurveTU -n "polySurface15_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 1 1 9 1 1 
+		1 9 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface15_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface15_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface15_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -0.96668561386210738 11 -0.96668561386210738
+		 16 -0.96668561386210738 20 -0.96668561386210738 24 -0.96668561386210738 29 -0.96668561386210738
+		 34 -0.96668561386210738 42 0 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface15_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface15_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface15_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface15_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface15_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface15_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface20_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 1 1 9 1 1 
+		1 9 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface20_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -72.824789654589566 11 -113.49632156509551
+		 16 -72.824789654589566 20 42.570706915325118 24 89.236963411409661 29 42.570706915325118
+		 34 -72.824789654589566 42 -29.092136486074526 53 -29.092136486074526 75 -29.092136486074526;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.00012044589675497264 0.00012044589675497264 
+		1 0.00012044589675497264 0.00012044589675497264 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  -1 -1 0 -1 -1 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.00012044590403093025 0.00012044590403093025 
+		1 0.00012044590403093025 0.00012044590403093025 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  -1 -1 0 -1 -1 0 0 0;
+createNode animCurveTL -n "polySurface20_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -1.9571750068238332 11 10.846588503584872
+		 16 -1.9571750068238332 20 1.575420252042032 24 13.743320313155907 29 1.575420252042032
+		 34 -1.9571750068238332 42 2.223167691783273 53 2.223167691783273 75 2.223167691783273;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface20_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface20_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface20_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface20_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -9.5765497205825714 11 -17.474470135157205
+		 16 -9.5765497205825714 20 6.4557953074527328 24 14.61408457314916 29 6.4557953074527328
+		 34 -9.5765497205825714 42 -4.3699451081579497 53 -4.3699451081579497 75 -4.3699451081579497;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.80692970752716064 0.80692970752716064 
+		1 0.80692970752716064 0.80692970752716064 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  -0.59064745903015137 -0.59064745903015137 
+		0 -0.59064745903015137 -0.59064745903015137 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.80692976713180542 0.80692976713180542 
+		1 0.80692976713180542 0.80692976713180542 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  -0.59064745903015137 -0.59064745903015137 
+		0 -0.59064745903015137 -0.59064745903015137 0 0 0;
+createNode animCurveTU -n "polySurface20_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface20_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface20_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface21_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 1 1 9 1 1 
+		1 9 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface21_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -60.670092130073691 11 -139.45583889649805
+		 16 -60.670092130073691 20 52.514585981941487 24 92.62758250014808 29 52.514585981941487
+		 34 -60.670092130073691 42 -48.089137147684809 53 0.41575909319973609 75 -48.089137147684809;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  9.8025055194739252e-05 9.8025055194739252e-05 
+		1 9.8025055194739252e-05 9.8025055194739252e-05 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  -1 -1 0 -1 -1 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  9.8025055194739252e-05 9.8025055194739252e-05 
+		1 9.8025055194739252e-05 9.8025055194739252e-05 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  -1 -1 0 -1 -1 0 0 0;
+createNode animCurveTL -n "polySurface21_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 2.5507514934984208 11 30.350688419505996
+		 16 2.5507514934984208 20 8.0955799603833647 24 24.880771981790463 29 8.0955799603833647
+		 34 2.5507514934984208 42 55.153594712866351 53 57.383252279485163 75 55.153594712866351;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.0010718533303588629 0.0010718533303588629 
+		1 0.0010718533303588629 0.0010718533303588629 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0.99999940395355225 0.99999940395355225 
+		0 0.99999940395355225 0.99999940395355225 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.0010718533303588629 0.0010718533303588629 
+		1 0.0010718533303588629 0.0010718533303588629 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0.99999940395355225 0.99999940395355225 
+		0 0.99999940395355225 0.99999940395355225 0 0 0;
+createNode animCurveTL -n "polySurface21_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0.96668561386210738 7 0.96668561386210761
+		 11 0.96668561386210738 16 0.96668561386210761 20 0.96668561386210716 24 0.96668561386210716
+		 29 0.96668561386210716 34 0.96668561386210761 42 0.96668561386210727 53 0.96668561386210994
+		 75 0.96668561386210727;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface21_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface21_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface21_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -6.4090967919428712 11 -25.690144814364643
+		 16 -6.4090967919428712 20 9.5735511755688467 24 16.777588230561964 29 9.5735511755688467
+		 34 -6.4090967919428712 42 -12.346030646199841 53 2.6319013623003258 75 -12.346030646199841;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.68072831630706787 0.68072831630706787 
+		1 0.68072831630706787 0.68072831630706787 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  -0.73253601789474487 -0.73253601789474487 
+		0 -0.73253601789474487 -0.73253601789474487 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.68072831630706787 0.68072831630706787 
+		1 0.68072831630706787 0.68072831630706787 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  -0.7325359582901001 -0.7325359582901001 
+		0 -0.7325359582901001 -0.7325359582901001 0 0 0;
+createNode animCurveTU -n "polySurface21_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface21_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface21_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface22_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 1 1 9 1 1 
+		1 9 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface22_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 44.940118962395722 11 100.37372883931906
+		 16 44.940118962395722 20 -13.04397767576067 24 -72.071193703523264 29 -13.04397767576067
+		 34 44.940118962395722 42 -29.092136486074526 53 -29.092136486074526 75 -29.092136486074526;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.00013619268429465592 0.00013619268429465592 
+		1 0.00013619268429465592 0.00013619268429465592 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  1 1 0 1 1 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.00013619268429465592 0.00013619268429465592 
+		1 0.00013619268429465592 0.00013619268429465592 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  1 1 0 1 1 0 0 0;
+createNode animCurveTL -n "polySurface22_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 6.7468455683530451 11 22.429125865566341
+		 16 6.7468455683530451 20 -5.7747475559124899 24 7.0380208619132025 29 -5.7747475559124899
+		 34 6.7468455683530451 42 2.223167691783273 53 2.223167691783273 75 2.223167691783273;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.00060948275495320559 0.00060948275495320559 
+		1 0.00060948275495320559 0.00060948275495320559 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0.99999988079071045 0.99999988079071045 
+		0 0.99999988079071045 0.99999988079071045 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.00060948263853788376 0.00060948263853788376 
+		1 0.00060948263853788376 0.00060948263853788376 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0.9999997615814209 0.9999997615814209 0 
+		0.9999997615814209 0.9999997615814209 0 0 0;
+createNode animCurveTL -n "polySurface22_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface22_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface22_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface22_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 8.5380319515175938 11 15.796315444726948
+		 16 8.5380319515175938 20 -2.8361832349225415 24 -12.246944222524165 29 -2.8361832349225415
+		 34 8.5380319515175938 42 -4.3699451081579497 53 -4.3699451081579497 75 -4.3699451081579497;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.83396685123443604 0.83396685123443604 
+		1 0.83396685123443604 0.83396685123443604 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0.55181461572647095 0.55181461572647095 
+		0 0.55181461572647095 0.55181461572647095 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.83396685123443604 0.83396685123443604 
+		1 0.83396685123443604 0.83396685123443604 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0.55181455612182617 0.55181455612182617 
+		0 0.55181455612182617 0.55181455612182617 0 0 0;
+createNode animCurveTU -n "polySurface22_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface22_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface22_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface23_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 1 1 9 1 1 
+		1 9 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface23_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 49.656528618830727 11 114.58378310797126
+		 16 49.656528618830727 20 -28.858770937306918 24 -81.201424726478592 29 -28.858770937306918
+		 34 49.656528618830727 42 -48.089137147684809 53 0.41575909319973609 75 -48.089137147684809;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.00011930280015803874 0.00011930280015803874 
+		1 0.00011930280015803874 0.00011930280015803874 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  1 1 0 1 1 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.00011930280015803874 0.00011930280015803874 
+		1 0.00011930280015803874 0.00011930280015803874 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  1 1 0 1 1 0 0 0;
+createNode animCurveTL -n "polySurface23_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 9.3560721086509062 11 34.978544847253879
+		 16 9.3560721086509062 20 10.147892312909811 24 19.874386132841572 29 10.147892312909811
+		 34 9.3560721086509062 42 55.153594712866351 53 57.383252279485163 75 55.153594712866351;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.00039081572322174907 0.00039081572322174907 
+		1 0.00039081572322174907 0.00039081572322174907 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0.99999988079071045 0.99999988079071045 
+		0 0.99999988079071045 0.99999988079071045 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.00039081575232557952 0.00039081575232557952 
+		1 0.00039081575232557952 0.00039081575232557952 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0.99999994039535522 0.99999994039535522 
+		0 0.99999994039535522 0.99999994039535522 0 0 0;
+createNode animCurveTL -n "polySurface23_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0.21174628209184201 7 0.21174628209184201
+		 11 0.21174628209184201 16 0.21174628209184201 20 0.21174628209184204 24 0.21174628209184199
+		 29 0.21174628209184204 34 0.21174628209184201 42 0.21174628209184201 53 0.21174628209184457
+		 75 0.21174628209184201;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface23_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface23_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface23_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 9.1925935158125096 11 21.535855229726046
+		 16 9.1925935158125096 20 -7.2262279806370149 24 -14.36517185008584 29 -7.2262279806370149
+		 34 9.1925935158125096 42 -12.346030646199841 53 2.6319013623003258 75 -12.346030646199841;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  0.74252134561538696 0.74252134561538696 
+		1 0.74252134561538696 0.74252134561538696 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0.66982239484786987 0.66982239484786987 
+		0 0.66982239484786987 0.66982239484786987 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  0.74252134561538696 0.74252134561538696 
+		1 0.74252134561538696 0.74252134561538696 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0.66982239484786987 0.66982239484786987 
+		0 0.66982239484786987 0.66982239484786987 0 0 0;
+createNode animCurveTU -n "polySurface23_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface23_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface23_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface19_visibility";
+	setAttr ".tan" 5;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  9 9 9 1 1 9 1 1 
+		1 9 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface19_translateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface19_translateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "polySurface19_translateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 -0.21174628209184201 11 -0.21174628209184201
+		 16 -0.21174628209184201 20 -0.21174628209184201 24 -0.21174628209184201 29 -0.21174628209184201
+		 34 -0.21174628209184201 42 0 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface19_rotateX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface19_rotateY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "polySurface19_rotateZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 11 0 16 0 20 0 24 0 29 0 34 0 42 0
+		 53 0 75 0;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface19_scaleX";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface19_scaleY";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "polySurface19_scaleZ";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 11 1 16 1 20 1 24 1 29 1 34 1 42 1
+		 53 1 75 1;
+	setAttr -s 11 ".kit[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kot[0:10]"  18 18 18 1 1 18 1 1 
+		1 18 1;
+	setAttr -s 11 ".kix[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".kiy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
+	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 75;
+	setAttr ".unw" 75;
 select -ne :renderPartition;
 	setAttr -s 7 ".st";
 select -ne :initialShadingGroup;
@@ -2366,12 +4083,42 @@ connectAttr "lambert5SG.mwc" "polySurfaceShape8.iog.og[0].gco";
 connectAttr "polyChipOff2.out" "polySurfaceShape2.i";
 connectAttr "groupId2.id" "polySurfaceShape2.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "polySurfaceShape2.iog.og[0].gco";
+connectAttr "polySurface10_visibility.o" "polySurface10.v";
+connectAttr "polySurface10_translateX.o" "polySurface10.tx";
+connectAttr "polySurface10_translateY.o" "polySurface10.ty";
+connectAttr "polySurface10_translateZ.o" "polySurface10.tz";
+connectAttr "polySurface10_rotateX.o" "polySurface10.rx";
+connectAttr "polySurface10_rotateY.o" "polySurface10.ry";
+connectAttr "polySurface10_rotateZ.o" "polySurface10.rz";
+connectAttr "polySurface10_scaleX.o" "polySurface10.sx";
+connectAttr "polySurface10_scaleY.o" "polySurface10.sy";
+connectAttr "polySurface10_scaleZ.o" "polySurface10.sz";
 connectAttr "groupParts11.og" "polySurfaceShape11.i";
 connectAttr "groupId11.id" "polySurfaceShape11.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "polySurfaceShape11.iog.og[0].gco";
+connectAttr "polySurface12_visibility.o" "polySurface12.v";
+connectAttr "polySurface12_translateX.o" "polySurface12.tx";
+connectAttr "polySurface12_translateY.o" "polySurface12.ty";
+connectAttr "polySurface12_translateZ.o" "polySurface12.tz";
+connectAttr "polySurface12_rotateX.o" "polySurface12.rx";
+connectAttr "polySurface12_rotateY.o" "polySurface12.ry";
+connectAttr "polySurface12_rotateZ.o" "polySurface12.rz";
+connectAttr "polySurface12_scaleX.o" "polySurface12.sx";
+connectAttr "polySurface12_scaleY.o" "polySurface12.sy";
+connectAttr "polySurface12_scaleZ.o" "polySurface12.sz";
 connectAttr "groupParts13.og" "polySurfaceShape13.i";
 connectAttr "groupId13.id" "polySurfaceShape13.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "polySurfaceShape13.iog.og[0].gco";
+connectAttr "polySurface13_visibility.o" "polySurface13.v";
+connectAttr "polySurface13_translateX.o" "polySurface13.tx";
+connectAttr "polySurface13_translateY.o" "polySurface13.ty";
+connectAttr "polySurface13_translateZ.o" "polySurface13.tz";
+connectAttr "polySurface13_rotateX.o" "polySurface13.rx";
+connectAttr "polySurface13_rotateY.o" "polySurface13.ry";
+connectAttr "polySurface13_rotateZ.o" "polySurface13.rz";
+connectAttr "polySurface13_scaleX.o" "polySurface13.sx";
+connectAttr "polySurface13_scaleY.o" "polySurface13.sy";
+connectAttr "polySurface13_scaleZ.o" "polySurface13.sz";
 connectAttr "groupParts14.og" "polySurfaceShape14.i";
 connectAttr "groupId14.id" "polySurfaceShape14.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "polySurfaceShape14.iog.og[0].gco";
@@ -2381,6 +4128,16 @@ connectAttr "lambert5SG.mwc" "polySurfaceShape12.iog.og[0].gco";
 connectAttr "polyChipOff3.out" "polySurfaceShape3.i";
 connectAttr "groupId3.id" "polySurfaceShape3.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "polySurfaceShape3.iog.og[0].gco";
+connectAttr "polySurface3_visibility.o" "polySurface3.v";
+connectAttr "polySurface3_translateX.o" "polySurface3.tx";
+connectAttr "polySurface3_translateY.o" "polySurface3.ty";
+connectAttr "polySurface3_translateZ.o" "polySurface3.tz";
+connectAttr "polySurface3_rotateX.o" "polySurface3.rx";
+connectAttr "polySurface3_rotateY.o" "polySurface3.ry";
+connectAttr "polySurface3_rotateZ.o" "polySurface3.rz";
+connectAttr "polySurface3_scaleX.o" "polySurface3.sx";
+connectAttr "polySurface3_scaleY.o" "polySurface3.sy";
+connectAttr "polySurface3_scaleZ.o" "polySurface3.sz";
 connectAttr "groupParts4.og" "polySurfaceShape4.i";
 connectAttr "groupId4.id" "polySurfaceShape4.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "polySurfaceShape4.iog.og[0].gco";
@@ -2403,6 +4160,16 @@ connectAttr "group_rotateZ.o" "group.rz";
 connectAttr "group_scaleX.o" "group.sx";
 connectAttr "group_scaleY.o" "group.sy";
 connectAttr "group_scaleZ.o" "group.sz";
+connectAttr "pasted__polySurface4_visibility.o" "pasted__polySurface4.v";
+connectAttr "pasted__polySurface4_translateX.o" "pasted__polySurface4.tx";
+connectAttr "pasted__polySurface4_translateY.o" "pasted__polySurface4.ty";
+connectAttr "pasted__polySurface4_translateZ.o" "pasted__polySurface4.tz";
+connectAttr "pasted__polySurface4_rotateX.o" "pasted__polySurface4.rx";
+connectAttr "pasted__polySurface4_rotateY.o" "pasted__polySurface4.ry";
+connectAttr "pasted__polySurface4_rotateZ.o" "pasted__polySurface4.rz";
+connectAttr "pasted__polySurface4_scaleX.o" "pasted__polySurface4.sx";
+connectAttr "pasted__polySurface4_scaleY.o" "pasted__polySurface4.sy";
+connectAttr "pasted__polySurface4_scaleZ.o" "pasted__polySurface4.sz";
 connectAttr "pasted__groupParts5.og" "pasted__polySurfaceShape4.i";
 connectAttr "pasted__groupId5.id" "pasted__polySurfaceShape4.iog.og[0].gid";
 connectAttr "pasted__lambert5SG.mwc" "pasted__polySurfaceShape4.iog.og[0].gco";
@@ -2419,7 +4186,7 @@ connectAttr "polySurface8_rotateZ.o" "polySurface8.rz";
 connectAttr "polySurface8_scaleX.o" "polySurface8.sx";
 connectAttr "polySurface8_scaleY.o" "polySurface8.sy";
 connectAttr "polySurface8_scaleZ.o" "polySurface8.sz";
-connectAttr "groupParts9.og" "polySurfaceShape9.i";
+connectAttr "polyCut4.out" "polySurfaceShape9.i";
 connectAttr "groupId9.id" "polySurfaceShape9.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "polySurfaceShape9.iog.og[0].gco";
 connectAttr "polySurface9_visibility.o" "polySurface9.v";
@@ -2432,9 +4199,98 @@ connectAttr "polySurface9_rotateZ.o" "polySurface9.rz";
 connectAttr "polySurface9_scaleX.o" "polySurface9.sx";
 connectAttr "polySurface9_scaleY.o" "polySurface9.sy";
 connectAttr "polySurface9_scaleZ.o" "polySurface9.sz";
-connectAttr "groupParts10.og" "polySurfaceShape10.i";
+connectAttr "polyCut9.out" "polySurfaceShape10.i";
 connectAttr "groupId10.id" "polySurfaceShape10.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "polySurfaceShape10.iog.og[0].gco";
+connectAttr "polySurface20_visibility.o" "polySurface20.v";
+connectAttr "polySurface20_translateX.o" "polySurface20.tx";
+connectAttr "polySurface20_translateY.o" "polySurface20.ty";
+connectAttr "polySurface20_translateZ.o" "polySurface20.tz";
+connectAttr "polySurface20_rotateX.o" "polySurface20.rx";
+connectAttr "polySurface20_rotateY.o" "polySurface20.ry";
+connectAttr "polySurface20_rotateZ.o" "polySurface20.rz";
+connectAttr "polySurface20_scaleX.o" "polySurface20.sx";
+connectAttr "polySurface20_scaleY.o" "polySurface20.sy";
+connectAttr "polySurface20_scaleZ.o" "polySurface20.sz";
+connectAttr "groupParts22.og" "polySurfaceShape21.i";
+connectAttr "groupId22.id" "polySurfaceShape21.iog.og[0].gid";
+connectAttr "lambert5SG.mwc" "polySurfaceShape21.iog.og[0].gco";
+connectAttr "polySurface21_visibility.o" "polySurface21.v";
+connectAttr "polySurface21_translateX.o" "polySurface21.tx";
+connectAttr "polySurface21_translateY.o" "polySurface21.ty";
+connectAttr "polySurface21_translateZ.o" "polySurface21.tz";
+connectAttr "polySurface21_rotateX.o" "polySurface21.rx";
+connectAttr "polySurface21_rotateY.o" "polySurface21.ry";
+connectAttr "polySurface21_rotateZ.o" "polySurface21.rz";
+connectAttr "polySurface21_scaleX.o" "polySurface21.sx";
+connectAttr "polySurface21_scaleY.o" "polySurface21.sy";
+connectAttr "polySurface21_scaleZ.o" "polySurface21.sz";
+connectAttr "groupParts23.og" "polySurfaceShape22.i";
+connectAttr "groupId23.id" "polySurfaceShape22.iog.og[0].gid";
+connectAttr "lambert5SG.mwc" "polySurfaceShape22.iog.og[0].gco";
+connectAttr "polySurface15_visibility.o" "polySurface15.v";
+connectAttr "polySurface15_translateX.o" "polySurface15.tx";
+connectAttr "polySurface15_translateY.o" "polySurface15.ty";
+connectAttr "polySurface15_translateZ.o" "polySurface15.tz";
+connectAttr "polySurface15_rotateX.o" "polySurface15.rx";
+connectAttr "polySurface15_rotateY.o" "polySurface15.ry";
+connectAttr "polySurface15_rotateZ.o" "polySurface15.rz";
+connectAttr "polySurface15_scaleX.o" "polySurface15.sx";
+connectAttr "polySurface15_scaleY.o" "polySurface15.sy";
+connectAttr "polySurface15_scaleZ.o" "polySurface15.sz";
+connectAttr "deleteComponent3.og" "polySurfaceShape16.i";
+connectAttr "groupId17.id" "polySurfaceShape16.iog.og[0].gid";
+connectAttr "pasted__lambert5SG.mwc" "polySurfaceShape16.iog.og[0].gco";
+connectAttr "polyChipOff5.out" "polySurfaceShape17.i";
+connectAttr "groupId18.id" "polySurfaceShape17.iog.og[0].gid";
+connectAttr "lambert5SG.mwc" "polySurfaceShape17.iog.og[0].gco";
+connectAttr "polySurface22_visibility.o" "polySurface22.v";
+connectAttr "polySurface22_translateX.o" "polySurface22.tx";
+connectAttr "polySurface22_translateY.o" "polySurface22.ty";
+connectAttr "polySurface22_translateZ.o" "polySurface22.tz";
+connectAttr "polySurface22_rotateX.o" "polySurface22.rx";
+connectAttr "polySurface22_rotateY.o" "polySurface22.ry";
+connectAttr "polySurface22_rotateZ.o" "polySurface22.rz";
+connectAttr "polySurface22_scaleX.o" "polySurface22.sx";
+connectAttr "polySurface22_scaleY.o" "polySurface22.sy";
+connectAttr "polySurface22_scaleZ.o" "polySurface22.sz";
+connectAttr "groupParts24.og" "polySurfaceShape23.i";
+connectAttr "groupId24.id" "polySurfaceShape23.iog.og[0].gid";
+connectAttr "lambert5SG.mwc" "polySurfaceShape23.iog.og[0].gco";
+connectAttr "polySurface23_visibility.o" "polySurface23.v";
+connectAttr "polySurface23_translateX.o" "polySurface23.tx";
+connectAttr "polySurface23_translateY.o" "polySurface23.ty";
+connectAttr "polySurface23_translateZ.o" "polySurface23.tz";
+connectAttr "polySurface23_rotateX.o" "polySurface23.rx";
+connectAttr "polySurface23_rotateY.o" "polySurface23.ry";
+connectAttr "polySurface23_rotateZ.o" "polySurface23.rz";
+connectAttr "polySurface23_scaleX.o" "polySurface23.sx";
+connectAttr "polySurface23_scaleY.o" "polySurface23.sy";
+connectAttr "polySurface23_scaleZ.o" "polySurface23.sz";
+connectAttr "groupParts25.og" "polySurfaceShape24.i";
+connectAttr "groupId25.id" "polySurfaceShape24.iog.og[0].gid";
+connectAttr "lambert5SG.mwc" "polySurfaceShape24.iog.og[0].gco";
+connectAttr "polySurface19_visibility.o" "polySurface19.v";
+connectAttr "polySurface19_translateX.o" "polySurface19.tx";
+connectAttr "polySurface19_translateY.o" "polySurface19.ty";
+connectAttr "polySurface19_translateZ.o" "polySurface19.tz";
+connectAttr "polySurface19_rotateX.o" "polySurface19.rx";
+connectAttr "polySurface19_rotateY.o" "polySurface19.ry";
+connectAttr "polySurface19_rotateZ.o" "polySurface19.rz";
+connectAttr "polySurface19_scaleX.o" "polySurface19.sx";
+connectAttr "polySurface19_scaleY.o" "polySurface19.sy";
+connectAttr "polySurface19_scaleZ.o" "polySurface19.sz";
+connectAttr "deleteComponent6.og" "polySurfaceShape20.i";
+connectAttr "groupId21.id" "polySurfaceShape20.iog.og[0].gid";
+connectAttr "lambert5SG.mwc" "polySurfaceShape20.iog.og[0].gco";
+connectAttr "polyChipOff6.out" "polySurfaceShape19.i";
+connectAttr "groupId20.id" "polySurfaceShape19.iog.og[0].gid";
+connectAttr "lambert5SG.mwc" "polySurfaceShape19.iog.og[0].gco";
+connectAttr "groupParts16.og" "polySurfaceShape15.i";
+connectAttr "groupId15.id" "polySurfaceShape15.iog.og[0].gid";
+connectAttr "pasted__lambert5SG.mwc" "polySurfaceShape15.iog.og[0].gco";
+connectAttr "groupId16.id" "polySurfaceShape15.iog.og[1].gid";
+connectAttr "lambert5SG.mwc" "polySurfaceShape15.iog.og[1].gco";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -2538,6 +4394,14 @@ connectAttr "polySurfaceShape11.iog.og[0]" "lambert5SG.dsm" -na;
 connectAttr "polySurfaceShape12.iog.og[0]" "lambert5SG.dsm" -na;
 connectAttr "polySurfaceShape13.iog.og[0]" "lambert5SG.dsm" -na;
 connectAttr "polySurfaceShape14.iog.og[0]" "lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape15.iog.og[1]" "lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape17.iog.og[0]" "lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape19.iog.og[0]" "lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape20.iog.og[0]" "lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape21.iog.og[0]" "lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape22.iog.og[0]" "lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape23.iog.og[0]" "lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape24.iog.og[0]" "lambert5SG.dsm" -na;
 connectAttr "groupId1.msg" "lambert5SG.gn" -na;
 connectAttr "groupId2.msg" "lambert5SG.gn" -na;
 connectAttr "groupId3.msg" "lambert5SG.gn" -na;
@@ -2552,6 +4416,14 @@ connectAttr "groupId11.msg" "lambert5SG.gn" -na;
 connectAttr "groupId12.msg" "lambert5SG.gn" -na;
 connectAttr "groupId13.msg" "lambert5SG.gn" -na;
 connectAttr "groupId14.msg" "lambert5SG.gn" -na;
+connectAttr "groupId16.msg" "lambert5SG.gn" -na;
+connectAttr "groupId18.msg" "lambert5SG.gn" -na;
+connectAttr "groupId20.msg" "lambert5SG.gn" -na;
+connectAttr "groupId21.msg" "lambert5SG.gn" -na;
+connectAttr "groupId22.msg" "lambert5SG.gn" -na;
+connectAttr "groupId23.msg" "lambert5SG.gn" -na;
+connectAttr "groupId24.msg" "lambert5SG.gn" -na;
+connectAttr "groupId25.msg" "lambert5SG.gn" -na;
 connectAttr "lambert5SG.msg" "materialInfo4.sg";
 connectAttr "HaleTextureMap.msg" "materialInfo4.m";
 connectAttr "file4.msg" "materialInfo4.t" -na;
@@ -2596,8 +4468,12 @@ connectAttr "pasted__HaleShape.o" "pasted__polySeparate1.ip";
 connectAttr "pasted__HaleTextureMap.oc" "pasted__lambert5SG.ss";
 connectAttr "pasted__HaleShape.iog.og[0]" "pasted__lambert5SG.dsm" -na;
 connectAttr "pasted__polySurfaceShape4.iog.og[0]" "pasted__lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape15.iog.og[0]" "pasted__lambert5SG.dsm" -na;
+connectAttr "polySurfaceShape16.iog.og[0]" "pasted__lambert5SG.dsm" -na;
 connectAttr "pasted__groupId1.msg" "pasted__lambert5SG.gn" -na;
 connectAttr "pasted__groupId5.msg" "pasted__lambert5SG.gn" -na;
+connectAttr "groupId15.msg" "pasted__lambert5SG.gn" -na;
+connectAttr "groupId17.msg" "pasted__lambert5SG.gn" -na;
 connectAttr "pasted__lambert5SG.msg" "pasted__materialInfo4.sg";
 connectAttr "pasted__HaleTextureMap.msg" "pasted__materialInfo4.m";
 connectAttr "pasted__file4.msg" "pasted__materialInfo4.t" -na;
@@ -2662,6 +4538,63 @@ connectAttr "polySeparate4.out[0]" "groupParts13.ig";
 connectAttr "groupId13.id" "groupParts13.gi";
 connectAttr "polySeparate4.out[1]" "groupParts14.ig";
 connectAttr "groupId14.id" "groupParts14.gi";
+connectAttr "groupParts9.og" "polyCut1.ip";
+connectAttr "polySurfaceShape9.wm" "polyCut1.mp";
+connectAttr "polyCut1.out" "polyCut2.ip";
+connectAttr "polySurfaceShape9.wm" "polyCut2.mp";
+connectAttr "polyCut2.out" "polyCut3.ip";
+connectAttr "polySurfaceShape9.wm" "polyCut3.mp";
+connectAttr "polyCut3.out" "polyCut4.ip";
+connectAttr "polySurfaceShape9.wm" "polyCut4.mp";
+connectAttr "groupParts10.og" "polyCut5.ip";
+connectAttr "polySurfaceShape10.wm" "polyCut5.mp";
+connectAttr "polyCut5.out" "polyCut6.ip";
+connectAttr "polySurfaceShape10.wm" "polyCut6.mp";
+connectAttr "polyCut6.out" "polyCut7.ip";
+connectAttr "polySurfaceShape10.wm" "polyCut7.mp";
+connectAttr "polyCut7.out" "polyCut8.ip";
+connectAttr "polySurfaceShape10.wm" "polyCut8.mp";
+connectAttr "polyCut8.out" "polyCut9.ip";
+connectAttr "polySurfaceShape10.wm" "polyCut9.mp";
+connectAttr "pasted__polySurfaceShape4.o" "polyUnite3.ip[0]";
+connectAttr "polySurfaceShape9.o" "polyUnite3.ip[1]";
+connectAttr "polySurfaceShape10.o" "polyUnite3.ip[2]";
+connectAttr "pasted__polySurfaceShape4.wm" "polyUnite3.im[0]";
+connectAttr "polySurfaceShape9.wm" "polyUnite3.im[1]";
+connectAttr "polySurfaceShape10.wm" "polyUnite3.im[2]";
+connectAttr "polyUnite3.out" "groupParts15.ig";
+connectAttr "groupId15.id" "groupParts15.gi";
+connectAttr "groupParts15.og" "groupParts16.ig";
+connectAttr "groupId16.id" "groupParts16.gi";
+connectAttr "polySurfaceShape15.o" "polySeparate5.ip";
+connectAttr "polySeparate5.out[0]" "groupParts17.ig";
+connectAttr "groupId17.id" "groupParts17.gi";
+connectAttr "polySeparate5.out[1]" "groupParts18.ig";
+connectAttr "groupId18.id" "groupParts18.gi";
+connectAttr "polySeparate5.out[3]" "groupParts20.ig";
+connectAttr "groupId20.id" "groupParts20.gi";
+connectAttr "polySeparate5.out[4]" "groupParts21.ig";
+connectAttr "groupId21.id" "groupParts21.gi";
+connectAttr "groupParts18.og" "polyChipOff5.ip";
+connectAttr "polySurfaceShape17.wm" "polyChipOff5.mp";
+connectAttr "polySurfaceShape17.o" "polySeparate6.ip";
+connectAttr "polySeparate6.out[0]" "groupParts22.ig";
+connectAttr "groupId22.id" "groupParts22.gi";
+connectAttr "polySeparate6.out[1]" "groupParts23.ig";
+connectAttr "groupId23.id" "groupParts23.gi";
+connectAttr "groupParts20.og" "polyChipOff6.ip";
+connectAttr "polySurfaceShape19.wm" "polyChipOff6.mp";
+connectAttr "polySurfaceShape19.o" "polySeparate7.ip";
+connectAttr "polySeparate7.out[0]" "groupParts24.ig";
+connectAttr "groupId24.id" "groupParts24.gi";
+connectAttr "polySeparate7.out[1]" "groupParts25.ig";
+connectAttr "groupId25.id" "groupParts25.gi";
+connectAttr "groupParts17.og" "deleteComponent1.ig";
+connectAttr "deleteComponent1.og" "deleteComponent2.ig";
+connectAttr "deleteComponent2.og" "deleteComponent3.ig";
+connectAttr "groupParts21.og" "deleteComponent4.ig";
+connectAttr "deleteComponent4.og" "deleteComponent5.ig";
+connectAttr "deleteComponent5.og" "deleteComponent6.ig";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
