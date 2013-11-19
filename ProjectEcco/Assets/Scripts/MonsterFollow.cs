@@ -26,7 +26,7 @@ public class MonsterFollow : MonoBehaviour {
 		if(!following&&(distance()<=1)){
 			following=true;
 			rigidbody.AddForce(player.transform.up.normalized*jumpForce*.25f);
-			attack.Shoot();
+			attack.Shoot(true);
 		}
 		if(following&&jump()){
 			//transform.position=Vector3.Lerp (transform.position,new Vector3(transform.position.x,player.transform.position.y+1,transform.position.z), speed);//rigidbody.AddForce (jumpForce*Vector3.up);
@@ -35,7 +35,7 @@ public class MonsterFollow : MonoBehaviour {
 		if(following&&distance ()>10){
 			transform.position=player.transform.position-5*player.transform.forward;
 		}
-		else if(following&&(distance ()>1)){
+		else if(following&&(distance ()>1.5)){
 			transform.position=Vector3.Lerp(transform.position,player.transform.position,speed);
 		}
 		
