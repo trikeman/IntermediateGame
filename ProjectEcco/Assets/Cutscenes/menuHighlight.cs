@@ -27,7 +27,7 @@ public class menuHighlight : MonoBehaviour {
 	}
 	
 	void Update(){
-		if (Input.GetAxis("Vertical")<0){//Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown (KeyCode.DownArrow)){
+		if (Input.GetAxis("Vertical")<0&&VertTimer<=0){//Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown (KeyCode.DownArrow)){
 			if (playGame.renderer.material.color == Color.yellow){
 				playGame.renderer.material.color = startcolor;
 				howToPlay.renderer.material.color = Color.yellow;
@@ -38,7 +38,7 @@ public class menuHighlight : MonoBehaviour {
 			}
 			VertTimer=MAXTIME;
 		}
-		else if (Input.GetAxis("Vertical")>0){//Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown (KeyCode.W)){
+		else if (Input.GetAxis("Vertical")>0&&VertTimer<=0){//Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown (KeyCode.W)){
 			if (howToPlay.renderer.material.color == Color.yellow){
 				howToPlay.renderer.material.color = startcolor;
 				playGame.renderer.material.color = Color.yellow;
