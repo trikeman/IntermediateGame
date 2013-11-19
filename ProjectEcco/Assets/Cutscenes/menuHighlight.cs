@@ -9,6 +9,7 @@ public class menuHighlight : MonoBehaviour {
 	public GameObject book;
 	public GameObject backCredits;
 	public GameObject backHTP;
+	public GameObject mainCamera;
 	
 	public Transform htpCamera;
 	public Transform creditsCamera;
@@ -96,8 +97,21 @@ void OnMouseExit()
 		IEnumerator DoAnimation()
 {
   book.animation.Play("Book Opening");
-  yield return new WaitForSeconds(1); // wait for two seconds.
-  Debug.Log("This happens 2 seconds later. Tada.");
+		mainCamera.animation.Play("ZoomOutForBook");
+		Destroy(howToPlay);
+		Destroy(credits);
+		Destroy(playGame);
+  yield return new WaitForSeconds(6); // wait for two seconds.
+		book.animation.Play("Page 2");
+	yield return new WaitForSeconds(6);
+		book.animation.Play("Page 3");
+		yield return new WaitForSeconds(5);
+		book.animation.Play("Page 4");
+		yield return new WaitForSeconds(6);
+		book.animation.Play("Page 5");
+		yield return new WaitForSeconds(6);
+		mainCamera.animation.Play("ZoomIntoBook");
+		yield return new WaitForSeconds(4);
 		Application.LoadLevel("UnderTheBed");
 }
 	
