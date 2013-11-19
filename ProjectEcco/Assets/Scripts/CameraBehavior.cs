@@ -1,27 +1,101 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CameraBehavior : MonoBehaviour {
 
 	public GameObject player;
-	public float xOffset = 1.5f;
-	public float yOffset = 1.5f;
-	public float zOffset = 1.5f;
+	public float vertDistance = 1f;
+	public float horizDistance = 1f;
+	public float springConstant = 100f;
+	public float dampConstant = 2f;
+	
+	private Vector3 idealTranslate;
+	private Vector3 displacement;
+	private Vector3 springAccel;
+	private Vector3 velocity = new Vector3(0,0,0);
+	
+	void Start(){
+		dampConstant *= Mathf.Sqrt(springConstant);
+		transform.position = player.transform.position-(player.transform.forward*horizDistance)+(player.transform.up*vertDistance);
+		//Transform.LookAt(player.transform.positon, player.transform.up);
+	}
+	
+	void Update(){
+		float dist = Mathf.Sqrt((vertDistance*vertDistance)+(horizDistance*horizDistance));
+		RaycastHit hit;
+		Physics.Raycast(player.transform.position,transform.position-player.transform.position, out hit);
+		if(hit.distance<dist&&hit.collider.gameObject.tag!="Invisible"&&hit.collider.gameObject.tag!="MainCamera"){
+			Debug.Log (hit.distance + " " + hit.collider.name);
+			Debug.Log ("Wrong Distance");
+			Vector3 ray = (player.transform.position-transform.position).normalized*hit.distance;
+			ray.y=0;
+			idealTranslate = player.transform.position-(player.transform.forward * ray.magnitude) + (player.transform.up*vertDistance);
+		}
+		else{
+			Debug.Log("Hit Player");
+			idealTranslate = player.transform.position-(player.transform.forward*horizDistance) + (player.transform.up*vertDistance);
+		}
+		
+		transform.forward = player.transform.position - idealTranslate;
+		transform.forward.Normalize();
+		transform.right = Vector3.Cross(player.transform.up, transform.forward);
+		transform.up = Vector3.Cross(transform.forward,transform.right);
+		
+		displacement = transform.position - idealTranslate;
+		springAccel = (-1*springConstant*displacement) - (dampConstant * velocity);
+		velocity += springAccel * Time.deltaTime;
+		transform.position += velocity * Time.deltaTime;
+		
+		transform.LookAt(player.transform.position, transform.up);
+	}
+}	
+	/*//public variables
+	public GameObject player;
+	public float backwardOffset = 1.5f;
+	public float upOffset = 1.5f;
+	public float rightOffset = 0f;
+	
+	//private variables
+	private Vector3 offset;
+	
+	void Start(){
+		updateOffset();
+		transform.position=player.transform.position+offset;
+	}
+	
+	void Update(){
+		updateOffset();
+		transform.position=player.transform.position+offset;
+		
+		//Always finish by looking at the player
+		transform.LookAt(player.transform.position);
+	}
+	
+	void updateOffset(){
+		offset = (-1*player.transform.forward*backwardOffset) + (player.transform.right*rightOffset) + (player.transform.up*upOffset);
+	}
+}* /
+	/*public GameObject player;
+	public float rightOffset = 0f;
+	public float upOffset = 1.5f;
+	public float forwardOffset = 1.5f;
 	public float speed = 1f;
+	private float distance;
 	//public float xLimit = 13.5f;
 	
 	private Vector3 offset;
-	public GameObject parent;
-	private Quaternion idealRot;
-	private Vector3 lastPlayerPos;
+	//public GameObject parent;
+	//private Quaternion idealRot;
+	//private Vector3 lastPlayerPos;
 	
 	// Use this for initialization
 	void Start () {
-		offset = new Vector3(xOffset,yOffset,zOffset);
+		offset = (player.transform.forward*forwardOffset) + (player.transform.right*rightOffset) + (player.transform.up*upOffset);
 		//parent = transform.parent.gameObject;
-		lastPlayerPos = player.transform.position;
+		//lastPlayerPos = player.transform.position;
 		transform.position=player.transform.position+offset;
-		transform.LookAt (player.transform.position+offset);
+		transform.LookAt (player.transform.position);
+		distance = offset.magnitude;
 	}
 	
 	// Update is called once per frame
@@ -46,18 +120,26 @@ public class CameraBehavior : MonoBehaviour {
 		}
 		offset.x =xOffset;
 		offset.y=yOffset;
-		offset.z=zOffset;*/
+		offset.z=zOffset;* /
 		
 		//translation
-		Vector3 movement = player.transform.position-lastPlayerPos;
+		/*Vector3 movement = player.transform.position-lastPlayerPos;
 		lastPlayerPos=player.transform.position;
-		transform.position+=movement;
+		transform.position+=movement;*/
 		
-		if((transform.position-player.transform.position).magnitude<offset.magnitude-1){
+		/*if((transform.position-player.transform.position).magnitude<offset.magnitude-1){
 			transform.position-=player.transform.forward;	
 		}
 		else if((transform.position-player.transform.position).magnitude>offset.magnitude+1){
 			transform.position+=player.transform.forward;
+		}* /
+		
+		RaycastHit hit;
+		Ray PCRay=new Ray(transform.position,transform.position-player.transform.position);
+		Debug.DrawRay(transform.position,player.transform.position-transform.position);
+		
+		if(Physics.Raycast(PCRay,out hit, distance)){
+			transform.position=hit.collider.transform.position;
 		}
 
 		//transform.position=Vector3.Lerp (transform.position,player.transform.position+offset,Time.deltaTime*speed);
@@ -76,7 +158,7 @@ public class CameraBehavior : MonoBehaviour {
 		pos += player.transform.forward*(-1*distance);
 		transform.position=pos;
 		
-		transform.LookAt(player.transform.position);*/
+		transform.LookAt(player.transform.position);* /
 	}	
 
 	public bool faceBack(){
@@ -105,71 +187,4 @@ public class CameraBehavior : MonoBehaviour {
 		
 		return(Vector3.Cross(thisPos,targetPos).y>=0);
 	}
-}
-/*using UnityEngine;
-using System.Collections;
- 
-[AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
-public class CameraBehavior : MonoBehaviour {
- 
-    public Transform target;
-    public float distance = 5.0f;
-    public float xSpeed = 120.0f;
-    public float ySpeed = 120.0f;
- 
-    public float yMinLimit = -20f;
-    public float yMaxLimit = 80f;
- 
-    public float distanceMin = .5f;
-    public float distanceMax = 15f;
- 
-    float x = 0.0f;
-    float y = 0.0f;
- 
-	// Use this for initialization
-	void Start () {
-        Vector3 angles = transform.eulerAngles;
-        x = angles.y;
-        y = angles.x;
- 
-        // Make the rigid body not change rotation
-        if (rigidbody)
-            rigidbody.freezeRotation = true;
-	}
- 
-    void LateUpdate () {
-    if (target) {
-        x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-        y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
- 
-        y = ClampAngle(y, yMinLimit, yMaxLimit);
- 
-        Quaternion rotation = Quaternion.Euler(y, x, 0);
- 
-        distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel")*5, distanceMin, distanceMax);
- 
-        RaycastHit hit;
-        if (Physics.Linecast (target.position, transform.position, out hit)) {
-                distance -=  hit.distance;
-        }
-        Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-        Vector3 position = rotation * negDistance + target.position;
- 
-        transform.rotation = rotation;
-        transform.position = position;
- 
-    }
- 
-}
- 
-    public static float ClampAngle(float angle, float min, float max)
-    {
-        if (angle < -360F)
-            angle += 360F;
-        if (angle > 360F)
-            angle -= 360F;
-        return Mathf.Clamp(angle, min, max);
-    }
- 
- 
 }*/
