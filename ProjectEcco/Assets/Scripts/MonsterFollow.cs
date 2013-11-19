@@ -7,10 +7,11 @@ public class MonsterFollow : MonoBehaviour {
 	public GameObject player;
 	public float jumpForce = 3000;
 	public float speed;
+	private LightMonsterAttack attack;
 
 	// Use this for initialization
 	void Start () {
-	
+		attack = GetComponent<LightMonsterAttack>();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +25,8 @@ public class MonsterFollow : MonoBehaviour {
 		
 		if(!following&&(distance()<=1)){
 			following=true;
+			rigidbody.AddForce(player.transform.up.normalized*jumpForce*.25f);
+			attack.Shoot();
 		}
 		if(following&&jump()){
 			//transform.position=Vector3.Lerp (transform.position,new Vector3(transform.position.x,player.transform.position.y+1,transform.position.z), speed);//rigidbody.AddForce (jumpForce*Vector3.up);

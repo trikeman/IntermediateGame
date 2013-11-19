@@ -18,12 +18,16 @@ public class LightMonsterAttack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(follow.following&&Input.GetButtonDown("Fire2")){
-			Vector3 direction = camera.transform.forward;
-			direction.y=0;
-			direction.Normalize();
-			GameObject newBeam = (GameObject)GameObject.Instantiate(beam, transform.position+direction,transform.rotation);
-			newBeam.rigidbody.AddForce(direction*force);
-			metrics.LightUses++;
+			Shoot();
 		}
+	}
+	
+	public void Shoot(){
+		Vector3 direction = camera.transform.forward;
+		direction.y=0;
+		direction.Normalize();
+		GameObject newBeam = (GameObject)GameObject.Instantiate(beam, transform.position+direction,transform.rotation);
+		newBeam.rigidbody.AddForce(direction*force);
+		metrics.LightUses++;
 	}
 }
