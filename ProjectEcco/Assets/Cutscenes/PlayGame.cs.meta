@@ -1,9 +1,0 @@
-fileFormatVersion: 2
-guid: df587060d79ea4b038faa0428404c062
-MonoImporter:
-  serializedVersion: 2
-  defaultReferences:
-  - bookScene: {fileID: 100000, guid: 5171eceebc1b34f47b232e935c51cd1c, type: 3}
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 

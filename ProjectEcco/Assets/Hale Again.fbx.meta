@@ -129,7 +129,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    animationCompression: 1
+    animationCompression: 0
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -139,7 +139,7 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 1
       lastFrame: 1.10000002
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -160,7 +160,7 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 7
       lastFrame: 33
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
