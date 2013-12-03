@@ -36,7 +36,6 @@ public class LightMonsterAttack : MonoBehaviour {
 			direction = -1*direction;
 		direction.y=0;
 		direction.Normalize();
-		direction*=2;
 		GameObject newBeam = (GameObject)GameObject.Instantiate(beam, transform.position+direction,transform.rotation);
 		newBeam.rigidbody.AddForce(direction*force);
 		audio.PlayOneShot(lightBeam, .6F);
