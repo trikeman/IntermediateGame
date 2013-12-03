@@ -17,6 +17,12 @@ public class LightMonsterAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(follow.following){
+			Vector3 forward=camera.transform.forward;
+			forward.y = 0;
+			forward.Normalize();
+			transform.forward=forward;
+		}
 		if(follow.following&&Input.GetButtonDown("Fire2")){
 			Shoot(false);
 		}
