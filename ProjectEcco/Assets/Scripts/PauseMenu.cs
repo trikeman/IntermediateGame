@@ -51,6 +51,9 @@ public class PauseMenu : MonoBehaviour
  
 	private int toolbarInt = 0;
 	private string[]  toolbarstrings =  {"Audio","Graphics","Stats","System"};
+	
+	public AudioClip startPause;
+	public AudioClip endPause;
  
  
 	void Start() {
@@ -103,6 +106,7 @@ public class PauseMenu : MonoBehaviour
  
 		if (Input.GetButtonDown("Escape")) 
 		{
+			audio.PlayOneShot(startPause, .5F);
 	        switch (currentPage) 
 			{
 	            case Page.None: 
@@ -286,6 +290,7 @@ public class PauseMenu : MonoBehaviour
 	void MainPauseMenu() {
 	    BeginPage(200,200);
 	    if (GUILayout.Button (IsBeginning() ? "Play" : "Continue")) {
+			audio.PlayOneShot(endPause, .8F);
 	        UnPauseGame();
  
 	    }
