@@ -11,7 +11,9 @@ public class LightBall : MonoBehaviour {
 	private Color lightColor = Color.white;
 	public float duration = 10f;
 	public Light thisSpotlight;
-	public AudioClip thisEvent;
+	
+	public AudioClip darkWallGone;
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -36,7 +38,7 @@ public class LightBall : MonoBehaviour {
 			lighted = true;
 			Destroy(this.gameObject);
 			Destroy(thisDarkWall);
-			audio.PlayOneShot(thisEvent, 0.8F);
+			audio.PlayOneShot(darkWallGone, .8F);
 		}//else if (col.gameObject.tag == darkWallTag){
 		//	if (lighted == true){
 		//	Destroy(col.gameObject);

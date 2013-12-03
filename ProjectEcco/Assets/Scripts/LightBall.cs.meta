@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: d607c8e212d6b40eab5d887af10a0a5c
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - thisDarkWall: {instanceID: 0}
+  - thisSpotlight: {instanceID: 0}
+  - darkWallGone: {fileID: 8300000, guid: fe56b0ae040e8456f9516496e592828b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
