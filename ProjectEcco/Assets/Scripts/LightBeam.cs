@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class LightBeam : MonoBehaviour {
-
+	
+	public AudioClip lightBeamDie;
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -24,6 +26,7 @@ public class LightBeam : MonoBehaviour {
 		}
 		else{
 			Destroy(this.gameObject);
+			audio.PlayOneShot(lightBeamDie, .6F);
 		}
 	}
 }
