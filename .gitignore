@@ -1,2 +1,12 @@
-
+# Unity .gitignore file.
+.DS_Store
+ProjectEcco/Library
+ProjectEcco/Library/*
+*.csproj
+*.sln
+*.userprefs
+ProjectEcco/Temp
+*.pidb
+ProjectEcco/Build
+*Metric*.txt
 ProjectEcco/ProjectEcco.userprefs
