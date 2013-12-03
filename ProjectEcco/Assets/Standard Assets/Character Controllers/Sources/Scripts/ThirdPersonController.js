@@ -13,6 +13,8 @@ public var runMaxAnimationSpeed : float = 1.0;
 public var jumpAnimationSpeed : float = 1.15;
 public var landAnimationSpeed : float = 1.0;
 
+public var jumpSound : AudioClip; 
+
 private var _animation : Animation;
 
 enum CharacterState {
@@ -241,6 +243,7 @@ function ApplyJumping ()
 		if (canJump && Time.time < lastJumpButtonTime + jumpTimeout) {
 			verticalSpeed = CalculateJumpVerticalSpeed (jumpHeight);
 			SendMessage("DidJump", SendMessageOptions.DontRequireReceiver);
+			audio.PlayOneShot(jumpSound, .8f);
 		}
 	}
 }

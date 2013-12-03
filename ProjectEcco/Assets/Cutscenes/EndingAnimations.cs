@@ -5,6 +5,10 @@ public class EndingAnimations : MonoBehaviour {
 	
 	public GameObject theBook;
 	public GameObject mainCamera;
+	
+	public AudioClip pageOneAudio;
+	public AudioClip pageTwoAudio;
+	public AudioClip pageThreeAudio;
 
 	// Use this for initialization
 	void Start () {
@@ -20,9 +24,15 @@ public class EndingAnimations : MonoBehaviour {
 			IEnumerator DoAnimation()
 {
   yield return new WaitForSeconds(5);
+		audio.PlayOneShot(pageOneAudio, 5F);
+		yield return new WaitForSeconds(5);
 		theBook.animation.Play("Page 2");
+		yield return new WaitForSeconds(2);
+		audio.PlayOneShot(pageTwoAudio, 5F);
 	yield return new WaitForSeconds(6);
 		theBook.animation.Play("Page 3");
+		yield return new WaitForSeconds(2);
+		audio.PlayOneShot(pageThreeAudio, 5F);
 		yield return new WaitForSeconds(5);
 		theBook.animation.Play("Book Closing");
 		yield return new WaitForSeconds(1);
