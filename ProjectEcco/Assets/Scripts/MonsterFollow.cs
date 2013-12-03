@@ -25,7 +25,7 @@ public class MonsterFollow : MonoBehaviour {
 			transform.Translate (-1*direction);
 		}*/
 		
-		if(!following&&(distance()<=1)){
+		if(!following&&(distance()<=2)){
 			following=true;
 			rigidbody.AddForce(player.transform.up.normalized*jumpForce*.25f);
 			attack.Shoot(true);

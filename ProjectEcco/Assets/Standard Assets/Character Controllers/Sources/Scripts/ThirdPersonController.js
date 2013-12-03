@@ -336,39 +336,44 @@ if (CharacterState == 1){
 			if(!jumpingReachedApex) {
 				_animation[jumpPoseAnimation.name].speed = jumpAnimationSpeed;
 				_animation[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
-				_animation.CrossFade(jumpPoseAnimation.name);
-				//animation.Play("Jump");
+				//_animation.CrossFade(jumpPoseAnimation.name);
+				if(!animation.IsPlaying("Jump"))
+					animation.Play("Jump");
 			
 			} else {
 				_animation[jumpPoseAnimation.name].speed = -landAnimationSpeed;
 				_animation[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
-				_animation.CrossFade(jumpPoseAnimation.name);	
-				//animation.Play("Jump");			
+				//_animation.CrossFade(jumpPoseAnimation.name);	
+				if(!animation.IsPlaying("Jump"))
+					animation.Play("Jump");			
 			}
 		} 
 		else 
 		{
 			if(controller.velocity.sqrMagnitude < 0.1) {
-				_animation.CrossFade(idleAnimation.name); 
-				//animation.Play("Idle");
+				//_animation.CrossFade(idleAnimation.name); 
+				if(animation.Play("Idle",PlayMode.StopSameLayer))
+					Debug.Log("Play Idle Animation");
 			}
 			else 
 			{
 				if(_characterState == CharacterState.Running) {
 					_animation[runAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, runMaxAnimationSpeed);
-					_animation.CrossFade(runAnimation.name);	
-					//animation.Play("Walk");
+					//_animation.CrossFade(runAnimation.name);	
+					if(animation.Play("Walk",PlayMode.StopSameLayer))
+						Debug.Log("Play Walk Animation");
 				}
 				else if(_characterState == CharacterState.Trotting) {
 					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, trotMaxAnimationSpeed);
-					_animation.CrossFade(walkAnimation.name);	
-					//animation.Play("Walk");
+					//_animation.CrossFade(walkAnimation.name);	
+					if(animation.Play("Walk",PlayMode.StopSameLayer))
+						Debug.Log("Play Walk Animation");
 				}
 				else if(_characterState == CharacterState.Walking) {
 					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, walkMaxAnimationSpeed);
-					_animation.CrossFade(walkAnimation.name);
-			
-					//animation.Play("Walk");
+					//_animation.CrossFade(walkAnimation.name);	
+					if(animation.Play("Walk",PlayMode.StopSameLayer))
+						Debug.Log("Play Walk Animation");
 				}
 				
 			
