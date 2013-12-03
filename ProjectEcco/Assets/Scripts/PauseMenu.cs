@@ -292,9 +292,9 @@ public class PauseMenu : MonoBehaviour
 	    if (GUILayout.Button ("Options")) {
 	        currentPage = Page.Options;
 	    }
-	    if (GUILayout.Button ("Credits")) {
-	        currentPage = Page.Credits;
-	    }
+	  //  if (GUILayout.Button ("Credits")) {
+	    //    currentPage = Page.Credits;
+	    //}
 	    if (IsBrowser() && !IsBeginning() && GUILayout.Button ("Restart")) {
 	        Application.OpenURL(url);
 	    }

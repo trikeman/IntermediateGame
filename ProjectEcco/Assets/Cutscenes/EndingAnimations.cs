@@ -5,6 +5,8 @@ public class EndingAnimations : MonoBehaviour {
 	
 	public GameObject theBook;
 	public GameObject mainCamera;
+	public GameObject theEnd;
+	public GameObject pressAny;
 	
 	public AudioClip pageOneAudio;
 	public AudioClip pageTwoAudio;
@@ -37,5 +39,13 @@ public class EndingAnimations : MonoBehaviour {
 		theBook.animation.Play("Book Closing");
 		yield return new WaitForSeconds(1);
 		mainCamera.animation.Play("EndingPanOut");
+		yield return new WaitForSeconds(4);
+		theEnd.GetComponent<FadeObjectsInOut>().FadeIn();
+		yield return new WaitForSeconds(3);
+		pressAny.GetComponent<FadeObjectsInOut>().FadeIn();
+		yield return new WaitForSeconds(1);
+		if (Input.anyKey){
+			Application.Quit();
+		}
 }
 }

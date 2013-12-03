@@ -14,6 +14,7 @@ public var jumpAnimationSpeed : float = 1.15;
 public var landAnimationSpeed : float = 1.0;
 
 public var jumpSound : AudioClip; 
+public var walkingSound : AudioClip;
 
 private var _animation : Animation;
 
@@ -290,6 +291,14 @@ function DidJump ()
 }
 
 function Update() {
+
+if (CharacterState == 1){
+ if(!audio.isPlaying)
+    {
+      audio.PlayOneShot(walkingSound, .8F); 
+      audio.Play(); 
+    }
+}
 	
 	if (!isControllable)
 	{
@@ -357,10 +366,12 @@ function Update() {
 				}
 				else if(_characterState == CharacterState.Walking) {
 					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, walkMaxAnimationSpeed);
-					_animation.CrossFade(walkAnimation.name);	
+					_animation.CrossFade(walkAnimation.name);
+			
 					//animation.Play("Walk");
 				}
 				
+			
 			}
 		}
 	}
@@ -431,6 +442,7 @@ function GetLockCameraTimer ()
 function IsMoving ()  : boolean
 {
 	return Mathf.Abs(Input.GetAxisRaw("Vertical")) + Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5;
+
 }
 
 function HasJumpReachedApex ()
