@@ -10,6 +10,8 @@ public class LightMonsterAttack : MonoBehaviour {
 	
 	private MonsterFollow follow;
 	
+	public AudioClip lightBeam;
+	
 	// Use this for initialization
 	void Start () {
 		follow = GetComponent<MonsterFollow>();
@@ -36,6 +38,7 @@ public class LightMonsterAttack : MonoBehaviour {
 		direction.Normalize();
 		GameObject newBeam = (GameObject)GameObject.Instantiate(beam, transform.position+direction,transform.rotation);
 		newBeam.rigidbody.AddForce(direction*force);
+		audio.PlayOneShot(lightBeam, .6F);
 		metrics.LightUses++;
 	}
 }
