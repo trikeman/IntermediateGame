@@ -5,7 +5,7 @@ public class FadeObjectsInOut : MonoBehaviour
 {
 	// publically editable speed
 	public float fadeDelay = 0.0f; 
-	public float fadeTime = 0.5f; 
+	public float fadeTime = 4f; 
 	public bool fadeInOnStart = false; 
 	public bool fadeOutOnStart = false;
 	private bool logInitialFadeSequence = false; 
