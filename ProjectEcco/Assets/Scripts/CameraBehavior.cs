@@ -25,14 +25,14 @@ public class CameraBehavior : MonoBehaviour {
 		RaycastHit hit;
 		Physics.Raycast(player.transform.position,transform.position-player.transform.position, out hit);
 		if(hit.distance<dist&&hit.collider.gameObject.tag!="Invisible"&&hit.collider.gameObject.tag!="MainCamera"){
-			Debug.Log (hit.distance + " " + hit.collider.name);
-			Debug.Log ("Wrong Distance");
+			//Debug.Log (hit.distance + " " + hit.collider.name);
+			//Debug.Log ("Wrong Distance");
 			Vector3 ray = (player.transform.position-transform.position).normalized*hit.distance;
 			ray.y=0;
 			idealTranslate = player.transform.position-(player.transform.forward * ray.magnitude) + (player.transform.up*vertDistance);
 		}
 		else{
-			Debug.Log("Hit Player");
+			//Debug.Log("Hit Player");
 			idealTranslate = player.transform.position-(player.transform.forward*horizDistance) + (player.transform.up*vertDistance);
 		}
 		
