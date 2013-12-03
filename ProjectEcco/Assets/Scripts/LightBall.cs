@@ -37,7 +37,7 @@ public class LightBall : MonoBehaviour {
 		if (col.gameObject.tag == lightBeamTag){
 			Destroy(col.gameObject);
 			lighted = true;
-			Destroy(this.gameObject);
+			this.renderer.enabled = false;
 			Destroy(thisDarkWall);
 			audio.PlayOneShot(darkWallGone, .8F);
 			audio.PlayOneShot(thisEvent, 4F);
