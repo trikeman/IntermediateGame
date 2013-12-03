@@ -26,7 +26,7 @@ enum CharacterState {
 	Jumping = 4,
 }
 
-private var _characterState : CharacterState;
+public var _characterState : CharacterState;
 
 // The speed when walking
 var walkSpeed = 6.0;
@@ -329,7 +329,7 @@ if (CharacterState == 1){
 	var controller : CharacterController = GetComponent(CharacterController);
 	collisionFlags = controller.Move(movement);
 	
-	// ANIMATION sector
+	/*// ANIMATION sector
 	if(_animation) {
 		if(_characterState == CharacterState.Jumping) 
 		{
@@ -337,50 +337,62 @@ if (CharacterState == 1){
 				_animation[jumpPoseAnimation.name].speed = jumpAnimationSpeed;
 				_animation[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
 				//_animation.CrossFade(jumpPoseAnimation.name);
-				if(!animation.IsPlaying("Jump"))
-					animation.Play("Jump");
+				if(!_animation.IsPlaying(jumpPoseAnimation.name)){
+					_animation.Play("Jump");	
+					Debug.Log("Play Jump Animation");
+				}
 			
 			} else {
 				_animation[jumpPoseAnimation.name].speed = -landAnimationSpeed;
 				_animation[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
 				//_animation.CrossFade(jumpPoseAnimation.name);	
-				if(!animation.IsPlaying("Jump"))
-					animation.Play("Jump");			
+				if(!_animation.IsPlaying(jumpPoseAnimation.name)){
+					_animation.Play("Jump");	
+					Debug.Log("Play Jump Animation");
+				}		
 			}
 		} 
 		else 
 		{
 			if(controller.velocity.sqrMagnitude < 0.1) {
 				//_animation.CrossFade(idleAnimation.name); 
-				if(animation.Play("Idle",PlayMode.StopSameLayer))
+				if(!_animation.IsPlaying(idleAnimation.name)){
+					_animation.Play(idleAnimation.name,PlayMode.StopSameLayer);
 					Debug.Log("Play Idle Animation");
+				}
 			}
 			else 
 			{
 				if(_characterState == CharacterState.Running) {
 					_animation[runAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, runMaxAnimationSpeed);
 					//_animation.CrossFade(runAnimation.name);	
-					if(animation.Play("Walk",PlayMode.StopSameLayer))
-						Debug.Log("Play Walk Animation");
+					if(!_animation.IsPlaying(walkAnimation.name)){
+						_animation.Play(walkAnimation.name,PlayMode.StopSameLayer);
+						Debug.Log("Play Walk Animation " + Time.time);
+					}
 				}
 				else if(_characterState == CharacterState.Trotting) {
 					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, trotMaxAnimationSpeed);
 					//_animation.CrossFade(walkAnimation.name);	
-					if(animation.Play("Walk",PlayMode.StopSameLayer))
-						Debug.Log("Play Walk Animation");
+					if(!_animation.IsPlaying(walkAnimation.name)){
+						_animation.Play(walkAnimation.name,PlayMode.StopSameLayer);
+						Debug.Log("Play Walk Animation " + Time.time);
+					}
 				}
 				else if(_characterState == CharacterState.Walking) {
 					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, walkMaxAnimationSpeed);
 					//_animation.CrossFade(walkAnimation.name);	
-					if(animation.Play("Walk",PlayMode.StopSameLayer))
-						Debug.Log("Play Walk Animation");
+					if(!_animation.IsPlaying(walkAnimation.name)){
+						_animation.Play(walkAnimation.name,PlayMode.StopSameLayer);
+						Debug.Log("Play Walk Animation " + Time.time);
+					}
 				}
 				
 			
 			}
 		}
 	}
-	// ANIMATION sector
+	// ANIMATION sector*/
 	
 	// Set rotation to the move direction
 	if (IsGrounded())
@@ -427,7 +439,7 @@ function IsJumping () {
 	return jumping;
 }
 
-function IsGrounded () {
+public function IsGrounded () {
 	return (collisionFlags & CollisionFlags.CollidedBelow) != 0;
 }
 
